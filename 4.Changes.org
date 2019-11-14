@@ -1,4 +1,10 @@
-#+TITLE: Four.Changes
+#+TITLE: Four.Changes in Differiential and Integral Calculus
+
+#+BEGIN_SRC shell :results output
+pandoc --wrap=none 4.Changes.org -o ~/Public/nikola_post/posts/X的奇幻之旅.rst
+#+END_SRC
+
+#+RESULTS:
 
 * 17. Change We Can Believe In
 

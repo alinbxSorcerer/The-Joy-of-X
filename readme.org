@@ -1,4 +1,3 @@
-#+TITLE: preface
 
 #+ATTR_HTML: :width 300px
 [[./the-joy-of-x-images/journey-x.org_20191114_174154.png]]
