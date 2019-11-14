@@ -1,0 +1,475 @@
+#+TITLE: One.Numbers
+
+* 1. From Fish to Infinity
+
+THE BEST INTRODUCTION to numbers I've ever seen---the clearest and funniest explanation of what they are and why we need them---appears in a /Sesame Street/ video called /123 Count with Me/. Humphrey, an amiable but dimwitted fellow with pink fur and a green nose, is working the lunch shift at the Furry Arms Hotel when he takes a call from a roomful of penguins. Humphrey listens carefully and then calls out their order to the kitchen: “Fish, fish, fish, fish, fish, fish.” This prompts Ernie to enlighten him about the virtues of the number six.
+
+
+[[./the-joy-of-x-images/00002.jpeg]]
+
+ 
+
+ Children learn from this that numbers are wonderful shortcuts. Instead of saying the word “fish” exactly as many times as there are penguins, Humphrey could use the more powerful concept of six.
+
+As adults, however, we might notice a potential downside to numbers. Sure, they are great timesavers, but at a serious cost in abstraction. Six is more ethereal than six fish, precisely because it's more general. It applies to six of anything: six plates, six penguins, six utterances of
+ the word “fish.” It's the ineffable thing they all have in common.
+
+Viewed in this light, numbers start to seem a bit mysterious. They apparently exist in some sort of Platonic realm, a level above reality. In that respect they are more like other lofty concepts (e.g., truth and justice), and less like the ordinary objects of daily life. Their philosophical status becomes even murkier upon further reflection. Where exactly do numbers come from? Did humanity invent them? Or discover them?
+
+An additional subtlety is that numbers (and all mathematical ideas, for that matter) have lives of their own. We can't control them. Even though they exist in our minds, once we decide what we mean by them we have no say in how they behave. They obey certain laws and have certain properties, personalities, and ways of combining with one another, and there's nothing we can do about it except watch and try to understand. In that sense they are eerily reminiscent of atoms and stars, the things of this world, which are likewise subject to laws beyond our control . . . except that those things exist outside our heads.
+
+This dual aspect of numbers---as part heaven, part earth ---is perhaps their most paradoxical feature, and the feature that makes them so useful. It is what the physicist Eugene Wigner had in mind when he wrote of “the unreasonable effectiveness of mathematics in the natural sciences.”
+
+ In case it's not clear what I mean about the lives of numbers and their uncontrollable behavior, let's go back to the Furry Arms. Suppose that before Humphrey puts in the penguins' order, he suddenly gets a call on another line from a room occupied by the same number of penguins, all of them also clamoring for fish. After taking both calls, what should Humphrey yell out to the kitchen? If he hasn't learned anything, he could shout “fish” once for each penguin. Or, using his numbers, he could tell the cook he needs six orders of fish for the first room and six more for the second room. But what he really needs is a new concept: addition. Once he's mastered it, he'll proudly say he needs six plus six (or, if he's a showoff, twelve) fish.
+
+The creative process here is the same as the one that gave us numbers in the first place. Just as numbers are a shortcut for counting by ones, addition is a shortcut for counting by any amount. This is how mathematics grows. The right abstraction leads to new insight, and new power.
+
+Before long, even Humphrey might realize he can keep counting forever.
+
+Yet despite this infinite vista, there are always constraints on our creativity. We can decide what we mean by things like 6 and +, but once we do, the results of expressions like 6 + 6 are beyond our control. Logic leaves us no choice. In that sense, math always involves both invention /and/ discovery: we invent the concepts but discover their consequences. As we'll see in the coming chapters, in mathematics our freedom lies in the questions we ask---and in how we pursue them---but not in the answers awaiting us.
+* 2. Rock Groups
+
+LIKE ANYTHING ELSE, arithmetic has its serious side and its playful side.
+
+The serious side is what we all learned in school: how to work with columns of numbers, adding them, subtracting them, grinding them through the spreadsheet calculations needed for tax returns and year-end reports. This side of arithmetic is important, practical, and---for many people---joyless.
+
+The playful side of arithmetic is a lot less familiar, unless you were trained in the ways of advanced mathematics. Yet there's nothing inherently advanced about it. It's as natural as a child's curiosity.
+
+In his book /A Mathematician's Lament/, Paul Lockhart advocates an educational approach in which numbers are treated more concretely than usual: he asks us to imagine them as groups of rocks. For example, 6 corresponds to a group of rocks like this:
+[[./the-joy-of-x-images/00003.jpeg]]
+
+
+You probably don't see anything striking here, and that's right---unless we make further demands on numbers, they all look pretty much the same. Our chance to be creative comes in what we ask of them.
+
+For instance, let's focus on groups having between 1 and 10 rocks in them, and ask which of these groups can be rearranged into square patterns. Only two of them can: the group with 4 and the group with 9. And that's because 4 = 2 × 2 and 9 = 3 × 3; we get these numbers by squaring some other number (actually making a square shape).
+
+ 
+
+[[./the-joy-of-x-images/00004.jpeg]]
+
+ 
+
+A less stringent challenge is to identify groups of rocks that can be neatly organized into a rectangle with exactly two rows that come out even. That's possible as long as there are 2, 4, 6, 8, or 10 rocks; the number has to be even. If we try to coerce any of the other numbers from 1 to 10---the odd numbers---into two rows, they always leave an odd bit sticking out.
+
+ 
+
+[[./the-joy-of-x-images/00005.jpeg]]
+
+ 
+
+ Still, all is not lost for these misfit numbers. If we add two of them together, their protuberances match up and their sum comes out even; Odd + Odd = Even.
+
+ 
+
+[[./the-joy-of-x-images/00006.jpeg]]
+
+ 
+
+If we loosen the rules still further to admit numbers greater than 10 and allow a rectangular pattern to have more than two rows of rocks, some odd numbers display a talent for making these larger rectangles. For example, the number 15 can form a 3 × 5 rectangle:
+
+ 
+
+[[./the-joy-of-x-images/00007.jpeg]]
+
+ 
+
+So 15, although undeniably odd, at least has the consolation of being a composite number---it's composed of three rows of five rocks each. Similarly, every other entry in the multiplication table yields its own rectangular rock group.
+
+Yet some numbers, like 2, 3, 5, and 7, truly are hopeless. None of them can form any sort of rectangle at all, other than a simple line of rocks (a single row). These strangely inflexible numbers are the famous prime numbers.
+
+So we see that numbers have quirks of structure that endow them with personalities. But to see the full range of their behavior, we need to go beyond individual numbers and watch what happens when they interact.
+
+ For example, instead of adding just two odd numbers together, suppose we add all the consecutive odd numbers, starting from 1:
+
+ 
+
+[[./the-joy-of-x-images/00008.jpeg]]
+
+ 
+
+The sums above, remarkably, always turn out to be perfect squares. (We saw 4 and 9 in the square patterns discussed earlier, and 16 = 4 × 4, and 25 = 5 × 5.) A quick check shows that this rule keeps working for larger and larger odd numbers; it apparently holds all the way out to infinity. But what possible connection could there be between odd numbers, with their ungainly appendages, and the classically symmetrical numbers that form squares? By arranging our rocks in the right way, we can make this surprising link seem obvious---the hallmark of an elegant proof.
+
+The key is to recognize that odd numbers can make L-shapes, with their protuberances cast off into the corner. And when you stack successive L-shapes together, you get a square!
+
+
+[[./the-joy-of-x-images/00009.jpeg]]
+
+ 
+
+ This style of thinking appears in another recent book, though for altogether different literary reasons. In Yoko Ogawa's charming novel /The Housekeeper and the Professor/, an astute but uneducated young woman with a ten-year-old son is hired to take care of an elderly mathematician who has suffered a traumatic brain injury that leaves him with only eighty minutes of short-term memory. Adrift in the present, and alone in his shabby cottage with nothing but his numbers, the Professor tries to connect with the Housekeeper the only way he knows how: by inquiring about her shoe size or birthday and making mathematical small talk about her statistics. The Professor also takes a special liking to the Housekeeper's son, whom he calls Root, because the flat top of the boy's head reminds him of the square root symbol, [[./the-joy-of-x-images/00010.jpeg]].
+
+One day the Professor gives Root a little puzzle: Can he find the sum of all the numbers from 1 to 10? After Root carefully adds the numbers and returns with the answer (55), the Professor asks him to find a better way. Can he find the answer /without/ adding the numbers? Root kicks the chair and shouts, “That's not fair!”
+
+But little by little the Housekeeper gets drawn into the world of numbers, and she secretly starts exploring the puzzle herself. “I'm not sure why I became so absorbed in a child's math problem with no practical value,” she says. “At first, I was conscious of wanting to please the Professor, but gradually that feeling faded and I realized it had become a battle between the problem and me. When I woke in the morning, the equation was waiting:
+
+ 
+
+[[./the-joy-of-x-images/00011.jpeg]]
+
+ 
+
+and it followed me all through the day, as though it had burned itself into my retina and could not be ignored.”
+
+ There are several ways to solve the Professor's problem (see how many you can find). The Professor himself gives an argument along the lines we developed above. He interprets the sum from 1 to 10 as a triangle of rocks, with 1 rock in the first row, 2 in the second, and so on, up to 10 rocks in the tenth row:
+
+ 
+
+[[./the-joy-of-x-images/00012.jpeg]]
+
+ 
+
+By its very appearance this picture gives a clear sense of negative space. It seems only half complete. And that suggests a creative leap. If you copy the triangle, flip it upside down, and add it as the missing half to what's already there, you get something much simpler: a rectangle with ten rows of 11 rocks each, for a total of 110.
+
+ 
+
+ [[./the-joy-of-x-images/00013.jpeg]]
+
+ 
+
+Since the original triangle is half of this rectangle, the desired sum must be half of 110, or 55.
+
+Looking at numbers as groups of rocks may seem unusual, but actually it's as old as math itself. The word “calculate” reflects that legacy---it comes from the Latin word /calculus/, meaning a pebble used for counting. To enjoy working with numbers you don't have to be Einstein (German for “one stone”), but it might help to have rocks in your head.
+* 3. The Enemy of My Enemy
+
+IT'S TRADITIONAL TO teach kids subtraction right after addition. That makes sense---the same facts about numbers get used in both, though in reverse. And the black art of borrowing, so crucial to successful subtraction, is only a little more baroque than that of carrying, its counterpart for addition. If you can cope with calculating 23 + 9, you'll be ready for 23 -- 9 soon enough.
+
+At a deeper level, however, subtraction raises a much more disturbing issue, one that never arises with addition. Subtraction can generate negative numbers. If I try to take 6 cookies away from you but you have only 2, I can't do it---except in my mind, where you now have negative 4 cookies, whatever that means.
+
+Subtraction forces us to expand our conception of what numbers are. Negative numbers are a lot more abstract than positive numbers---you can't see negative 4 cookies and you certainly can't eat them---but you can think about them, and you /have/ to, in all aspects of daily life, from debts and overdrafts to contending with freezing temperatures and parking garages.
+
+Still, many of us haven't quite made peace with negative numbers. As my colleague Andy Ruina has pointed out, people have concocted all sorts of funny little mental strategies to sidestep the dreaded negative sign. On mutual fund statements, losses (negative numbers) are printed in red or nestled in parentheses with nary a negative sign to be found. The history books tell us that Julius Caesar was born in 100 B.C., not --100. The subterranean levels in a parking garage often have designations like B1 and B2. Temperatures are one of the few exceptions: folks do say, especially here in Ithaca, New York, that it's --5 degrees outside, though even then, many prefer to say 5 below zero. There's something about that negative sign that just looks so unpleasant, so . . . negative.
+
+ Perhaps the most unsettling thing is that a negative times a negative is a positive. So let me try to explain the thinking behind that.
+
+How should we define the value of an expression like --1 × 3, where we're multiplying a negative number by a positive number? Well, just as 1 × 3 means 1 + 1 + 1, the natural definition for --1 × 3 is (--1) + (--1) + (--1), which equals --3. This should be obvious in terms of money: if you owe me $1 a week, after three weeks you're $3 in the hole.
+
+From there it's a short hop to see why a negative times a negative should be a positive. Take a look at the following string of equations:
+
+ 
+
+[[./the-joy-of-x-images/00014.jpeg]]
+
+ 
+
+Now look at the numbers on the far right and notice their orderly progression: --3, --2, --1, 0, . . . At each step, we're adding 1 to the number before it. So wouldn't you agree the next number should logically be 1?
+
+ That's one argument for why (--1) × (--1) = 1. The appeal of this definition is that it preserves the rules of ordinary arithmetic; what works for positive numbers also works for negative numbers.
+
+But if you're a hard-boiled pragmatist, you may be wondering if these abstractions have any parallels in the real world. Admittedly, life sometimes seems to play by different rules. In conventional morality, two wrongs don't make a right. Likewise, double negatives don't always amount to positives; they can make negatives more intense, as in “I can't get no satisfaction.” (Actually, languages can be very tricky in this respect. The eminent linguistic philosopher J. L. Austin of Oxford once gave a lecture in which he asserted that there are many languages in which a double negative makes a positive but none in which a double positive makes a negative---to which the Columbia philosopher Sidney Morgenbesser, sitting in the audience, sarcastically replied, “Yeah, yeah.” )
+
+Still, there are plenty of cases where the real world does mirror the rules of negative numbers. One nerve cell's firing can be inhibited by the firing of a second nerve cell. If that second nerve cell is then inhibited by a third, the first cell can fire again. The indirect action of the third cell on the first is tantamount to excitation; a chain of two negatives makes a positive. Similar effects occur in gene regulation: a protein can turn a gene on by blocking another molecule that was repressing that stretch of DNA.
+
+Perhaps the most familiar parallel occurs in the social and political realms as summed up by the adage “The enemy of my enemy is my friend.” This truism, and related ones about the friend of my enemy, the enemy of my friend, and so on, can be depicted in relationship triangles.
+
+ The corners signify people, companies, or countries, and the sides connecting them signify their relationships, which can be positive (friendly, shown here as solid lines) or negative (hostile, shown as dashed lines).
+
+ 
+
+[[./the-joy-of-x-images/00015.jpeg]]
+
+ 
+
+Social scientists refer to triangles like the one on the left, with all sides positive, as balanced---there's no reason for anyone to change how he feels, since it's reasonable to like your friends' friends. Similarly, the triangle on the right, with two negatives and a positive, is considered balanced because it causes no dissonance; even though it allows for hostility, nothing cements a friendship like hating the same person.
+
+Of course, triangles can also be unbalanced. When three mutual enemies size up the situation, two of them---often the two with the least animosity toward each other---may be tempted to join forces and gang up on the third.
+
+Even more unbalanced is a triangle with a single negative relationship. For instance, suppose Carol is friendly with both Alice and Bob, but Bob and Alice despise each other. Perhaps they were once a couple but suffered a nasty breakup, and each is now badmouthing the other to ever-loyal Carol. This causes psychological stress all around. To restore balance, either Alice and Bob have to reconcile or Carol has to choose a side.
+
+ 
+
+ [[./the-joy-of-x-images/00016.jpeg]]
+
+ 
+
+In all these cases, the logic of balance matches the logic of multiplication. In a balanced triangle, the sign of the product of any two sides, positive or negative, always agrees with the sign of the third. In unbalanced triangles, this pattern is broken.
+
+Leaving aside the verisimilitude of the model, there are interesting questions here of a purely mathematical flavor. For example, in a close-knit network where everyone knows everyone, what's the most stable state? One possibility is a nirvana of goodwill, where all relationships are positive and all triangles within the network are balanced. But surprisingly, there are other states that are equally stable. These are states of intractable conflict, with the network split into two hostile factions (of arbitrary sizes and compositions). All members of one faction are friendly with one another but antagonistic toward everybody in the other faction. (Sound familiar?) Perhaps even more surprisingly, these polarized states are the /only/ states as stable as nirvana. In particular, no three-party split can have all its triangles balanced.
+
+Scholars have used these ideas to analyze the run-up to World War I. The diagram that follows shows the shifting alliances among Great Britain, France, Russia, Italy, Germany, and Austria-Hungary between 1872 and 1907.
+
+
+
+[[./the-joy-of-x-images/00017.jpeg]]
+
+
+
+ The first five configurations were all unbalanced, in the sense that they each contained at least one unbalanced triangle. The resultant dissonance tended to push these nations to realign themselves, triggering reverberations elsewhere in the network. In the final stage, Europe had split into two implacably opposed blocs---technically balanced, but on the brink of war.
+
+The point is not that this theory is powerfully predictive. It isn't. It's too simple to account for all the subtleties of geopolitical dynamics. The point is that some part of what we observe is due to nothing more than the primitive logic of “the enemy of my enemy,” and /this/ part is captured perfectly by the multiplication of negative numbers. By sorting the meaningful from the generic, the arithmetic of negative numbers can help us see where the real puzzles lie.
+* 4. Commuting
+
+EVERY DECADE OR SO a new approach to teaching math comes along and creates fresh opportunities for parents to feel inadequate. Back in the 1960s, my parents were flabbergasted by their inability to help me with my second-grade homework. They'd never heard of base 3 or Venn diagrams.
+
+Now the tables have turned. “Dad, can you show me how to do these multiplication problems?” /Sure/, I thought, until the headshaking began. “No, Dad, that's not how we're supposed to do it. That's the old-school method. Don't you know the lattice method? No? Well, what about partial products?”
+
+These humbling sessions have prompted me to revisit multiplication from scratch. And it's actually quite subtle, once you start to think about it.
+
+Take the terminology. Does “seven times three” mean “seven added to itself three times”? Or “three added to itself seven times”?
+
+In some cultures the language is less ambiguous. A friend of mine from Belize used to recite his times tables like this: “Seven ones are seven, seven twos are fourteen, seven threes are twenty-one,” and so on. This phrasing makes it clear that the first number is the multiplier; the second number is the thing being multiplied. It's the same convention as in Lionel Richie's immortal lyrics “She's once, twice, three times a lady.” (“She's a lady times three” would never have been a hit.)
+
+ Maybe all this semantic fuss strikes you as silly, since the order in which numbers are multiplied doesn't matter anyway: 7 × 3 = 3 × 7. Fair enough, but that begs the question I'd like to explore in some depth here: Is this commutative law of multiplication, /a/ × /b/ = /b/ × /a/, really so obvious? I remember being surprised by it as a child; maybe you were too.
+
+To recapture the magic, imagine not knowing what 7 × 3 equals. So you try counting by sevens: 7, 14, 21. Now turn it around and count by threes instead: 3, 6, 9, . . . Do you feel the suspense building? So far, none of the numbers match those in the sevens list, but keep going . . . 12, 15, 18, and then, bingo, 21!
+
+My point is that if you regard multiplication as being synonymous with repeated counting by a certain number (or, in other words, with repeated addition), the commutative law isn't transparent.
+
+But it becomes more intuitive if you conceive of multiplication /visually/. Think of 7 × 3 as the number of dots in a rectangular array with seven rows and three columns.
+
+ 
+
+[[./the-joy-of-x-images/00018.gif]]
+
+ 
+
+If you turn the array on its side, it transforms into three rows and seven columns---and since rotating the picture doesn't change the number of dots, it must be true that 7 × 3 = 3 × 7.
+
+ 
+
+[[./the-joy-of-x-images/00019.jpeg]]
+
+ 
+
+Yet strangely enough, in many real-world situations, especially where money is concerned, people seem to forget the commutative law, or don't realize it applies. Let me give you two examples.
+
+Suppose you're shopping for a new pair of jeans. They're on sale for 20 percent off the sticker price of $50, which sounds like a bargain, but keep in mind that you also have to pay the 8 percent sales tax. After the clerk finishes complimenting you on the flattering fit, she starts ringing up the purchase but then pauses and whispers, in a conspiratorial tone, “Hey, let me save you some money. I'll apply the tax first, and then take twenty percent off the total, so you'll get more money back. Okay?”
+
+But something about that sounds fishy to you. “No thanks,” you say. “Could you please take the twenty percent off first, then apply the tax to the sale price? That way, I'll pay less tax.”
+
+Which way is a better deal for you? (Assume both are legal.)
+
+When confronted with a question like this, many people approach it /additively/. They work out the tax and the discount under both scenarios, and then do whatever additions or subtractions are necessary to find the final price. Doing things the clerk's way, you reason, would cost you $4 in tax (8 percent of the sticker price of $50). That would bring your total to $54. Then applying the 20 percent discount to $54 gives you $10.80 back, so you'd end up paying $54 minus $10.80, which equals $43.20. Whereas under your scenario, the 20 percent discount would be applied first, saving you $10 off the $50 sticker price. Then the 8 percent tax on that reduced price of $40 would be $3.20, so you'd still end up paying $43.20. Amazing!
+
+ But it's merely the commutative law in action. To see why, think /multiplicatively/, not additively. Applying an 8 percent tax followed by a 20 percent discount amounts to multiplying the sticker price by 1.08 and then multiplying that result by 0.80. Switching the order of tax and discount reverses the multiplication, but since 1.08 × 0.80 = 0.80 × 1.08, the final price comes out the same.
+
+Considerations like these also arise in larger financial decisions. Is a Roth 401(k) better or worse than a traditional retirement plan? More generally, if you have a pile of money to invest and you have to pay taxes on it at some point, is it better to take the tax bite at the beginning of the investment period, or at the end?
+
+Once again, the commutative law shows it's a wash, all other things being equal (which, sadly, they often aren't). If, for both scenarios, your money grows by the same factor and gets taxed at the same rate, it doesn't matter whether you pay the taxes up front or at the end.
+
+Please don't mistake this mathematical remark for financial advice. Anyone facing these decisions in real life needs to be aware of many complications that muddy the waters: Do you expect to be in a higher or lower tax bracket when you retire? Will you max out your contribution limits? Do you think the government will change its policies about the tax-exempt status of withdrawals by the time you're ready to take the money out? Leaving all this aside (and don't get me wrong, it's all important; I'm just trying to focus here on a simpler mathematical issue), my basic point is that the commutative law is relevant to the analysis of such decisions.
+
+ You can find heated debates about this on personal finance sites on the Internet. Even after the relevance of the commutative law has been pointed out, some bloggers don't accept it. It's that counterintuitive.
+
+Maybe we're wired to doubt the commutative law because in daily life, it usually matters what you do first. You can't have your cake and eat it too. And when taking off your shoes and socks, you've got to get the sequencing right.
+
+The physicist Murray Gell-Mann came to a similar realization one day when he was worrying about his future. As an undergraduate at Yale, he desperately wanted to stay in the Ivy League for graduate school. Unfortunately Princeton rejected his application. Harvard said yes but seemed to be dragging its feet about providing the financial support he needed. His best option, though he found it depressing, was MIT. In Gell-Mann's eyes, MIT was a grubby technological institute, beneath his rarefied taste. Nevertheless, he accepted the offer. Years later he would explain that he had contemplated suicide at the time but decided against it once he realized that attending MIT and killing himself didn't commute. He could always go to MIT and commit suicide later if he had to, but not the other way around.
+
+Gell-Mann had probably been sensitized to the importance of non-commutativity. As a quantum physicist he would have been acutely aware that at the deepest level, nature disobeys the commutative law. And it's a good thing, too. For the failure of commutativity is what makes the world the way it is. It's why matter is solid, and why atoms don't implode.
+
+Specifically, early in the development of quantum mechanics,  Werner Heisenberg and Paul Dirac had discovered that nature follows a curious kind of logic in which /p/ × /q/ ≠ /q/ × /p/, where /p/ and /q/ represent the momentum and position of a quantum particle. Without that breakdown of the commutative law, there would be no Heisenberg uncertainty principle, atoms would collapse, and nothing would exist.
+
+ That's why you'd better mind your /p/'s and /q/'s. And tell your kids to do the same.
+* 5. Division and Its Discontents
+
+THERE'S A NARRATIVE line that runs through arithmetic, but many of us missed it in the haze of long division and common denominators. It's the story of the quest for ever more versatile numbers.
+
+The natural numbers 1, 2, 3, and so on are good enough if all we want to do is count, add, and multiply. But once we ask how much remains when everything is taken away, we are forced to create a new kind of number---zero---and since debts can be owed, we need negative numbers too. This enlarged universe of numbers, called integers, is every bit as self-contained as the natural numbers but much more powerful because it embraces subtraction as well.
+
+A new crisis comes when we try to work out the mathematics of sharing. Dividing a whole number evenly is not always possible . . . unless we expand the universe once more, now by inventing fractions. These are ratios of integers---hence their technical name, rational numbers. Sadly, this is the place where many students hit the mathematical wall.
+
+There are many confusing things about division and its consequences, but perhaps the most maddening is that there are so many different ways to describe a part of a whole.
+
+ If you cut a chocolate layer cake right down the middle into two equal pieces, you could certainly say that each piece is half the cake. Or you might express the same idea with the fraction 1/2, meaning “1 of 2 equal pieces.” (When you write it this way, the slash between the 1 and the 2 is a visual reminder that something is being sliced.) A third way is to say that each piece is 50 percent of the whole, meaning literally “50 parts out of 100.” As if that weren't enough, you could also invoke decimal notation and describe each piece as 0.5 of the entire cake.
+
+This profusion of choices may be partly to blame for the bewilderment many of us feel when confronted with fractions, percentages, and decimals. A vivid example appears in the movie /My Left Foot/, the true story of the Irish writer, painter, and poet Christy Brown. Born into a large working-class family, he suffered from cerebral palsy that made it almost impossible for him to speak or control any of his limbs except his left foot. As a boy he was often dismissed as mentally disabled, especially by his father, who resented him and treated him cruelly.
+
+A pivotal scene in the movie takes place around the kitchen table. One of Christy's older sisters is quietly doing her math homework, seated next to her father, while Christy, as usual, is shunted off in the corner of the room, twisted in his chair. His sister breaks the silence: “What's twenty-five percent of a quarter?” she asks. Father mulls it over. “Twenty-five percent of a quarter? Uhhh . . . That's a stupid question, eh? I mean, twenty-five percent /is/ a quarter. You can't have a quarter of a quarter.” Sister responds, “You can. Can't you, Christy?” Father: “Ha! What would /he/ know?”
+
+Writhing, Christy struggles to pick up a piece of chalk with his left foot. Positioning it over a slate on the floor, he manages to scrawl a 1, then a slash, then something unrecognizable. It's the number 16, but the 6 comes out backward. Frustrated, he erases the 6 with his heel and tries again, but this time the chalk moves too far, crossing through the 6, rendering it indecipherable. “That's only a nervous squiggle,” sneers his father, turning away. Christy closes his eyes and slumps back, exhausted.
+
+ Aside from the dramatic power of the scene, what's striking is the father's conceptual rigidity. What makes him insist you can't have a quarter of a quarter? Maybe he thinks you can take a quarter only out of a whole or from something made of four equal parts. But what he fails to realize is that /everything/ is made of four equal parts. In the case of an object that's already a quarter, its four equal parts look like this:
+
+ 
+
+[[./the-joy-of-x-images/00020.jpeg]]
+
+ 
+
+ Since 16 of these thin slices make the original whole, each slice is 1/16 of the whole---the answer Christy was trying to scratch out.
+
+A version of the same kind of mental rigidity, updated for the digital age, made the rounds on the Internet a few years ago when a frustrated customer named George Vaccaro recorded and posted his phone conversation with two service representatives at Verizon Wireless. Vaccaro's complaint was that he'd been quoted a data usage rate of .002 cents per kilobyte, but his bill showed he'd been charged .002 /dollars/ per kilobyte, a hundredfold higher rate. The ensuing conversation climbed to the top fifty in YouTube's comedy section.
+
+Here's a highlight that occurs about halfway through the recording, during an exchange between Vaccaro and Andrea, the Verizon floor manager:
+
+ 
+
+#+BEGIN_QUOTE
+  V: Do you recognize that there's a difference between one dollar and one cent?
+#+END_QUOTE
+#+BEGIN_QUOTE
+  A: Definitely.
+#+END_QUOTE
+#+BEGIN_QUOTE
+  V: Do you recognize there's a difference between half a dollar and half a cent?
+#+END_QUOTE
+#+BEGIN_QUOTE
+  A: Definitely.
+#+END_QUOTE
+#+BEGIN_QUOTE
+  V: Then, do you therefore recognize there's a difference between .002 dollars and .002 cents?
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+  A: No.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+  V: No?
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+  A: I mean there's . . . there's no .002 dollars.
+#+END_QUOTE
+
+ 
+
+A few moments later Andrea says, “Obviously a dollar is ‘one, decimal, zero, zero,' right? So what would a ‘point zero zero two dollars' look like? . . . I've never heard of .002 dollars . . . It's just not a full cent.”
+
+ The challenge of converting between dollars and cents is only part of the problem for Andrea. The real barrier is her inability to envision a portion of either.
+
+From firsthand experience I can tell you what it's like to be mystified by decimals. In eighth grade, Ms. Stanton began teaching us how to convert a fraction into a decimal. Using long division, we found that some fractions give decimals that terminate in all zeros. For example, [[./the-joy-of-x-images/00021.gif]] = .2500 . . . , which can be rewritten as .25, since all those zeros amount to nothing. Other fractions give decimals that eventually repeat, like
+
+ 
+
+[[./the-joy-of-x-images/00022.jpeg]]
+
+ 
+
+My favorite was [[./the-joy-of-x-images/00023.gif]], whose decimal counterpart repeats every six digits:
+
+ 
+
+[[./the-joy-of-x-images/00024.jpeg]]
+
+ 
+
+The bafflement began when Ms. Stanton pointed out that if you triple both sides of the simple equation
+
+ 
+
+[[./the-joy-of-x-images/00025.jpeg]]
+
+ 
+
+you're forced to conclude that 1 must equal .9999 . . .
+
+At the time I protested that they couldn't be equal. No matter how many 9s she wrote, I could write just as many 0s in 1.0000 . . . and then if we subtracted her number from mine, there would be a teeny bit left over, something like .0000 . . . 01.
+
+Like Christy's father and the Verizon service reps, I couldn't accept something that had just been proven to me. I saw it but refused to believe it. (This might remind you of some people you know.)
+
+ But it gets worse---or better, if you like to feel your neurons sizzle. Back in Ms. Stanton's class, what stopped us from looking at decimals that neither terminate nor repeat periodically? It's easy to cook up such stomach-churners. Here's an example:
+
+ 
+
+[[./the-joy-of-x-images/00026.jpeg]]
+
+ 
+
+By design, the blocks of 2 get progressively longer as we move to the right. There's no way to express this decimal as a fraction. Fractions always yield decimals that terminate or eventually repeat periodically---that can be proven---and since this decimal does neither, it can't be equal to the ratio of any whole numbers. It's irrational.
+
+Given how contrived this decimal is, you might suppose irrationality is rare. On the contrary, it is typical. In a certain sense that can be made precise, almost all decimals are irrational. And their digits look statistically random.
+
+Once you accept these astonishing facts, everything turns topsy-turvy. Whole numbers and fractions, so beloved and familiar, now appear scarce and exotic. And that innocuous number line pinned to the molding of your grade-school classroom? No one ever told you, but it's chaos up there.
+* 6. Location, Location, Location
+
+I'D WALKED PAST Ezra Cornell's statue hundreds of times without even glancing at his greenish likeness. But then one day I stopped for a closer look.
+
+ 
+
+[[./the-joy-of-x-images/00027.jpeg]]
+
+ 
+
+ Ezra appears outdoorsy and ruggedly dignified in his long coat, vest, and boots, his right hand resting on a walking stick and holding a rumpled, wide-brimmed hat. The monument comes across as unpretentious and disarmingly direct---much like the man himself, by all accounts.
+
+Which is why it seems so discordant that Ezra's dates are inscribed on the pedestal in pompous Roman numerals:
+
+ 
+
+#+BEGIN_QUOTE
+  EZRA CORNELL
+  MDCCCVII--MDCCCLXXIV
+#+END_QUOTE
+
+ 
+
+Why not write simply 1807--1874? Roman numerals may look impressive, but they're hard to read and cumbersome to use. Ezra would have had little patience for that.
+
+Finding a good way to represent numbers has always been a challenge. Since the dawn of civilization, people have tried various systems for writing numbers and reckoning with them, whether for trading, measuring land, or keeping track of the herd.
+
+What nearly all these systems have in common is that our biology is deeply embedded in them. Through the vagaries of evolution, we happen to have five fingers on each of two hands. That peculiar anatomical fact is reflected in the primitive system of tallying; for example, the number 17 is written as
+
+ 
+
+[[./the-joy-of-x-images/00028.jpeg]]
+
+ 
+
+ Here, each of the vertical strokes in each group must have originally meant a finger. Maybe the diagonal slash was a thumb, folded across the other four fingers to make a fist?
+
+Roman numerals are only slightly more sophisticated than tallies. You can spot the vestige of tallies in the way Romans wrote 2 and 3, as II and III. Likewise, the diagonal slash is echoed in the shape of the Roman symbol for 5, V. But 4 is an ambiguous case. Sometimes it's written as IIII, tally style (you'll often see this on fancy clocks), though more commonly it's written as IV. The positioning of a smaller number (I) to the left of a larger number (V) indicates that you're supposed to subtract I, rather than add it, as you would if it were stationed on the right. Thus IV means 4, whereas VI means 6.
+
+The Babylonians were not nearly as attached to their fingers. Their numeral system was based on 60---a clear sign of their impeccable taste, for 60 is an exceptionally pleasant number. Its beauty is intrinsic and has nothing to do with human appendages. Sixty is the smallest number that can be divided evenly by 1, 2, 3, 4, 5, and 6. And that's just for starters (there's also 10, 12, 15, 20, and 30). Because of its promiscuous divisibility, 60 is much more congenial than 10 for any sort of calculation or measurement that involves cutting things into equal parts. When we divide an hour into 60 minutes, or a minute into 60 seconds, or a full circle into 360 degrees, we're channeling the sages of ancient Babylon.
+
+But the greatest legacy of the Babylonians is an idea that's so commonplace today that few of us appreciate how subtle and ingenious it is.
+
+To illustrate it, let's consider our own Hindu-Arabic system, which incorporates the same idea in its modern form. Instead of 60, this system is based on ten symbols: 1, 2, 3, 4, 5, 6, 7, 8, 9, and, most brilliant, 0. These are called digits, naturally, from the Latin word for a finger or a toe.
+
+ The great innovation here is that even though this system is based on the number 10, there is no single symbol reserved for 10. Ten is marked by a /position/---the tens place---instead of a symbol. The same is true for 100, or 1,000, or any other power of 10. Their distinguished status is signified not by a symbol but by a parking spot, a reserved piece of real estate. Location, location, location.
+
+Contrast the elegance of this place-value system with the much cruder approach used in Roman numerals. You want 10? We've got 10. It's X. We've also got 100 (C) and 1,000 (M), and we'll even throw in special symbols for the 5 family: V, L, and D, for 5, 50, and 500.
+
+The Roman approach was to elevate a few favored numbers, give them their own symbols, and express all the other, second-class numbers as combinations of those.
+
+Unfortunately, Roman numerals creaked and groaned when faced with anything larger than a few thousand. In a workaround solution that would nowadays be called a kludge, the scholars who were still using Roman numerals in the Middle Ages resorted to piling bars on top of the existing symbols to indicate multiplication by a thousand. For instance, [[./the-joy-of-x-images/00029.jpeg]] meant ten thousand, and [[./the-joy-of-x-images/00030.jpeg]] meant a thousand thousands or, in other words, a million. Multiplying by a billion (a thousand million) was rarely necessary, but if you ever had to, you could always put a second bar on top of the [[./the-joy-of-x-images/00031.jpeg]]. As you can see, the fun never stopped.
+
+But in the Hindu-Arabic system, it's a snap to write any number, no matter how big. All numbers can be expressed with the same ten digits, merely by slotting them into the right places. Furthermore, the notation is inherently concise. Every number less than a million, for example, can be expressed in six symbols or fewer. Try doing that with words, tallies, or Roman numerals.
+
+ Best of all, with a place-value system, ordinary people can learn to do arithmetic. You just have to master a few facts---the multiplication table and its counterpart for addition. Once you get those down, that's all you'll ever need. Any calculation involving any pair of numbers, no matter how big, can be performed by applying the same sets of facts, over and over again, recursively.
+
+If it all sounds pretty mechanical, that's precisely the point. With place-value systems, you can program a machine to do arithmetic. From the early days of mechanical calculators to the supercomputers of today, the automation of arithmetic was made possible by the beautiful idea of place value.
+
+But the unsung hero in this story is 0. Without 0, the whole approach would collapse. It's the placeholder that allows us to tell 1, 10, and 100 apart.
+
+All place-value systems are based on some number called, appropriately enough, the base. Our system is base 10, or decimal (from the Latin root /decem/, meaning “ten”). After the ones place, the subsequent consecutive places represent tens, hundreds, thousands, and so on, each of which is a power of 10:
+
+ 
+
+[[./the-joy-of-x-images/00032.jpeg]]
+
+ 
+
+Given what I said earlier about the biological, as opposed to the logical, origin of our preference for base 10, it's natural to ask: Would some other base be more efficient, or easier to manipulate?
+
+ A strong case can be made for base 2, the famous and now ubiquitous binary system used in computers and all things digital, from cell phones to cameras. Of all the possible bases, it requires the fewest symbols---just two of them, 0 and 1. As such, it meshes perfectly with the logic of electronic switches or anything else that can toggle between two states---on or off, open or closed.
+
+Binary takes some getting used to. Instead of powers of 10, it uses powers of 2. It still has a ones place like the decimal system, but the subsequent places now stand for twos, fours, and eights, because
+
+ 
+
+[[./the-joy-of-x-images/00033.jpeg]]
+
+ 
+
+Of course, we wouldn't write the symbol 2, because it doesn't exist in binary, just as there's no single numeral for 10 in decimal. In binary, 2 is written as 10, meaning one 2 and zero 1s. Similarly, 4 would be written as 100 (one 4, zero 2s, and zero 1s), and 8 would be 1000.
+
+The implications reach far beyond math. Our world has been changed by the power of 2. In the past few decades we've come to realize that /all/ information---not just numbers, but also language, images, and sound---can be encoded in streams of zeros and ones.
+
+Which brings us back to Ezra Cornell.
+
+Tucked at the rear of his monument, and almost completely obscured, is a telegraph machine---a modest reminder of his role in the creation of Western Union and the tying together of the North American continent.
+
+ 
+
+ [[./the-joy-of-x-images/00034.jpeg]]
+
+ 
+
+As a carpenter turned entrepreneur, Cornell worked for Samuel Morse, whose name lives on in the code of dots and dashes through which the English language was reduced to the clicks of a telegraph key. Those two little symbols were technological forerunners of today's zeros and ones.
+
+ Morse entrusted Cornell to build the nation's first telegraph line, a link from Baltimore to the U.S. Capitol, in Washington, D.C. From the very start it seems that he had an inkling of what his dots and dashes would bring. When the line was officially opened, on May 24, 1844, Morse sent the first message down the wire: “What hath God wrought.”
+
+
+
+
+

@@ -1,0 +1,709 @@
+#+TITLE: Three.Shapes
+
+* 12. Square Dancing
+
+I BET I CAN guess your favorite math subject in high school.
+
+It was geometry.
+
+So many people I've met over the years have expressed affection for that subject. Is it because geometry draws on the right side of the brain, and that appeals to visual thinkers who might otherwise cringe at its cold logic? Maybe. But some people tell me they loved geometry precisely because it /was/ so logical. The step-by-step reasoning, with each new theorem resting firmly on those already established---that's the source of satisfaction for many.
+
+But my best hunch (and, full disclosure, I personally love geometry) is that people enjoy it because it /marries/ logic and intuition. It feels good to use both halves of the brain.
+
+To illustrate the pleasures of geometry, let's revisit the Pythagorean theorem, which you probably remember as /a/² + /b/² = /c/². Part of the goal here is to see why it's true and appreciate why it matters. Beyond that, by proving the theorem in two different ways, we'll come to see how one proof can be more elegant than another, even though both are correct.
+
+The Pythagorean theorem is concerned with right triangles---meaning those with a right (90-degree) angle at one of the corners. Right triangles are important because they're what you get if you cut a rectangle in half along its diagonal:
+
+ 
+
+ [[./the-joy-of-x-images/00070.jpeg]]
+
+ 
+
+And since rectangles come up often in all sorts of settings, so do right triangles.
+
+They arise, for instance, in surveying. If you're measuring a rectangular field, you might want to know how far it is from one corner to the diagonally opposite corner. (By the way, this is where geometry started, historically---in problems of land measurement, or measuring the earth: /geo/ = “earth,” and /metry/ = “measurement.”)
+
+The Pythagorean theorem tells you how long the diagonal is compared to the sides of the rectangle. If one side has length /a/ and the other has length /b/, the theorem says the diagonal has length /c/, where
+
+ 
+
+[[./the-joy-of-x-images/00071.jpeg]]
+
+ 
+
+For some reason, the diagonal is traditionally called the hypotenuse, though I've never met anyone who knows why. (Any Latin or Greek scholars?) It must have something to do with the diagonal subtending a right angle, but as jargon goes, “subtending” is about as opaque as “hypotenuse.”
+
+ Anyway, here's how the theorem works. To keep the numbers simple, let's say /a/ = 3 yards and /b/ = 4 yards. Then to figure out the unknown length /c/, we don our black hoods and intone that /c/² is the sum of 3² plus 4², which is 9 plus 16. (Keep in mind that all of these quantities are now measured in square yards, since we squared the yards as well as the numbers themselves.) Finally, since 9 + 16 = 25, we get /c/² = 25 square yards, and then taking square roots of both sides yields /c/ = 5 yards as the length of the hypotenuse.
+
+This way of looking at the Pythagorean theorem makes it seem like a statement about lengths. But traditionally it was viewed as a statement about /areas/. That becomes clearer when you hear how they used to say it:
+
+ 
+
+#+BEGIN_QUOTE
+  The square on the hypotenuse is the sum of the squares on the other two sides.
+#+END_QUOTE
+
+ 
+
+Notice the word “on.” We're not speaking of the square /of/ the hypotenuse---that's a newfangled algebraic concept about multiplying a number (the length of the hypotenuse) by itself. No, we're referring here to a square literally sitting /on/ the hypotenuse, like this:
+
+ 
+
+[[./the-joy-of-x-images/00072.gif]]
+
+ 
+
+Let's call this the large square, to distinguish it from the small and medium squares we can build on the other two sides:
+
+ 
+
+ [[./the-joy-of-x-images/00073.jpeg]]
+
+ 
+
+Then the theorem says that the large square has the same area as the small and medium squares combined.
+
+For thousands of years, this marvelous fact has been expressed in a diagram, an iconic mnemonic of dancing squares:
+
+ 
+
+[[./the-joy-of-x-images/00074.jpeg]]
+
+ 
+
+Viewing the theorem in terms of areas makes it a lot more fun to think about. For example, you can test it---and then eat it---by building the squares out of many little crackers. Or you can treat the theorem like a child's puzzle, with pieces of different shapes and sizes. By rearranging these puzzle pieces, we can prove the theorem very simply, as follows.
+
+Let's go back to the tilted square sitting on the hypotenuse.
+
+ 
+
+[[./the-joy-of-x-images/00075.gif]]
+
+ 
+
+ At an instinctive level, you should feel a bit disquieted by this image. The square looks potentially unstable, like it might topple or slide down the ramp. And there's also an unpleasant arbitrariness about which of the four sides of the square gets to touch the triangle.
+
+Guided by these intuitive feelings, let's add three more copies of the triangle around the square to make a more solid and symmetrical picture:
+
+ 
+
+[[./the-joy-of-x-images/00076.gif]]
+
+ 
+
+Now recall what we're trying to prove: that the tilted white square in the picture above (which is just our earlier large square---it's still sitting right there on the hypotenuse) has the same area as the small and medium squares put together. But where are those other squares? Well, we have to shift some triangles around to find them.
+
+Think of the picture above as depicting a puzzle, with four triangular pieces wedged into the corners of a rigid puzzle frame.
+
+ 
+
+[[./the-joy-of-x-images/00077.jpeg]]
+
+ 
+
+ In this interpretation, the tilted square is the empty space in the middle of the puzzle. The rest of the area inside the frame is occupied by the puzzle pieces.
+
+Now let's try moving the pieces around in various ways. Of course, nothing we do can ever change the total amount of empty space inside the frame---it's always whatever area lies outside the pieces.
+
+The brainstorm, then, is to rearrange the pieces like this:
+
+ 
+
+[[./the-joy-of-x-images/00078.jpeg]]
+
+ 
+
+All of a sudden the empty space has changed into the two shapes we're looking for---the small square and the medium square. And since the total area of empty space always stays the same, we've just proven the Pythagorean theorem!
+
+This proof does far more than convince; it /illuminates/. That's what makes it elegant.
+
+For comparison, here's another proof. It's equally famous, and it's perhaps the simplest proof that avoids using areas.
+
+As before, consider a right triangle with sides of length /a/ and /b/ and hypotenuse of length /c/, as shown below on the left.
+
+ 
+
+[[./the-joy-of-x-images/00079.jpeg]]
+
+ 
+
+ Now, by divine inspiration or a stroke of genius, something tells us to draw a line segment perpendicular to the hypotenuse and down to the opposite corner, as shown in the triangle on the right.
+
+This clever little construction creates two smaller triangles inside the original one. It's easy to prove that all these triangles are similar---which means they have identical shapes but different sizes. That in turn implies that the lengths of their corresponding parts have the same proportions, which translates into the following set of equations:
+
+ 
+
+[[./the-joy-of-x-images/00080.jpeg]]
+
+ 
+
+We also know that
+
+ 
+
+[[./the-joy-of-x-images/00081.gif]]
+
+ 
+
+because our construction merely split the original hypotenuse of length /c/ into two smaller sides of lengths /d/ and /e/.
+
+At this point you might be feeling a bit lost, or at least unsure of what to do next. There's a morass of five equations above, and we're trying to whittle them down to deduce that
+
+ 
+
+[[./the-joy-of-x-images/00082.jpeg]]
+
+ 
+
+Try it for a few minutes. You'll discover that two of the equations are irrelevant. That's ugly; an elegant proof should involve nothing superfluous. With hindsight, of course, you wouldn't have listed those equations to begin with. But that would just be putting lipstick on a p . . . (the missing word here is “proof”).
+
+ Nevertheless, by manipulating the right three equations, you can get the theorem to pop out. See the notes on [[file:part0041.html#p272][[>]]] for the missing steps.
+
+Would you agree with me that, on aesthetic grounds, this proof is inferior to the first one? For one thing, it drags near the end. And who invited all that algebra to the party? This is supposed to be a geometry event.
+
+But a more serious defect is the proof's murkiness. By the time you're done slogging through it, you might believe the theorem (grudgingly), but you still might not /see/ why it's true.
+
+Leaving proofs aside, why does the Pythagorean theorem even matter? Because it reveals a fundamental truth about the nature of space. It implies that space is flat, as opposed to curved. For the surface of a globe or a bagel, for example, the theorem needs to be modified. Einstein confronted this challenge in his general theory of relativity (where gravity is no longer viewed as a force, but rather as a manifestation of the curvature of space), and so did Bernhard Riemann and others before him when laying the foundations of non-Euclidean geometry.
+
+It's a long road from Pythagoras to Einstein. But at least it's a straight line . . . for most of the way.
+* 13. Something from Nothing
+  :PROPERTIES:
+  :CUSTOM_ID: calibre_pb_0
+  :CLASS: chaptertitle
+  :END:
+
+EVERY MATH COURSE contains at least one notoriously difficult topic. In arithmetic, it's long division. In algebra, it's word problems. And in geometry, it's proofs.
+
+Most students who take geometry have never seen a proof before. The experience can come as a shock, so perhaps a warning label would be in order, something like this: /Proofs can cause dizziness or excessive drowsiness. Side effects of prolonged exposure may include night sweats, panic attacks, and, in rare cases, euphoria. Ask your doctor if proofs are right for you./
+
+Disorienting as proofs can be, learning to do them has long been thought essential to a liberal education---more essential than the subject matter itself, some would say. According to this view, geometry is good for the mind; it trains you to think clearly and logically. It's not the study of triangles, circles, and parallel lines per se that matters. What's important is the axiomatic method, the process of building a rigorous argument, step by step, until a desired conclusion has been established.
+
+Euclid laid down this deductive approach in the /Elements/ (now the most reprinted textbook of all time) about 2,300 years ago. Ever since, Euclidean geometry has been a model for logical reasoning in all walks of life, from science and law to philosophy and politics. For example, Isaac Newton channeled Euclid in the structure of his masterwork /The Mathematical Principles of Natural Philosophy/. Using geometrical proofs, he deduced Galileo's and Kepler's laws about projectiles and planets from his own deeper laws of motion and gravity. Spinoza's /Ethics/ follows the same pattern. Its full title is /Ethica Ordine Geometrico Demonstrata/ (/Ethics Demonstrated in Geometrical Order/). You can even hear echoes of Euclid in the Declaration of Independence. When Thomas Jefferson wrote, “We hold these truths to be self-evident,” he was mimicking the style of the /Elements/. Euclid had begun with the definitions, postulates, and self-evident truths of geometry---the axioms---and from them erected an edifice of propositions and demonstrations, one truth linked to the next by unassailable logic. Jefferson organized the Declaration in the same way so that its radical conclusion, that the colonies had the right to govern themselves, would seem as inevitable as a fact of geometry.
+
+ If that intellectual legacy seems far-fetched, keep in mind that Jefferson revered Euclid. A few years after he finished his second term as president and stepped out of public life, he wrote to his old friend John Adams on January 12, 1812, about the pleasures of leaving politics behind: “I have given up newspapers in exchange for Tacitus and Thucydides, for Newton and Euclid; and I find myself much the happier.”
+
+Still, what's missing in all this worship of Euclidean rationality is an appreciation of geometry's more intuitive aspects. Without inspiration, there'd be no proofs---or theorems to prove in the first place. Like composing music or writing poetry, geometry requires making something from nothing. How does a poet find the right words, or a composer a haunting melody? This is the mystery of the muse, and it's no less mysterious in math than in the other creative arts.
+
+ As an illustration, consider the problem of constructing an equilateral  triangle---a triangle with all three sides the same length. The rules of the game are that you're given one side of the triangle, the line segment shown here:
+
+ 
+
+[[./the-joy-of-x-images/00083.gif]]
+
+ 
+
+Your task is to use that segment, somehow, to construct the other two sides, and to prove that they each have the same length as the original. The only tools at your disposal are a straightedge and a compass. A straightedge allows you to draw a straight line of any length, or to draw a straight line between any two points. A compass allows you to draw a circle of any radius, centered at any point.
+
+Keep in mind, however, that a straightedge is not a ruler. It has no markings on it and can't be used to measure lengths. (Specifically, you can't use it to copy or measure the original segment.) Nor can a compass serve as a protractor; all it can do is draw circles, not measure angles.
+
+Ready? Begin.
+
+This is the moment of paralysis. Where to start?
+
+Logic won't help you here. Skilled problem solvers know that a better approach is to relax and play with the puzzle, hoping to get a feel for it. For instance, maybe it would help to use the straightedge to draw tilted lines through the ends of the segment, like this:
+
+ 
+
+[[./the-joy-of-x-images/00084.gif]]
+
+ 
+
+No luck. Although the lines form a triangle, there's no guarantee it's an /equilateral/ triangle.
+
+ Another stab in the dark would be to draw some circles with the compass. But where? Around one of the endpoints?
+
+ 
+
+[[./the-joy-of-x-images/00085.jpeg]]
+
+ 
+
+Or around a point inside the segment?
+
+ 
+
+[[./the-joy-of-x-images/00086.gif]]
+
+ 
+
+That second choice looks unpromising, since there's no reason to pick one interior point over another.
+
+So let's go back to drawing circles around endpoints.
+
+ 
+
+[[./the-joy-of-x-images/00087.jpeg]]
+
+ 
+
+Unfortunately there's still a lot of arbitrariness here. How big should the circles be? Nothing's popping out at us yet.
+
+After a few more minutes of flailing around like this, frustration (and an impending headache) may tempt us to give up. But if we don't, we might get lucky and realize there's only one natural circle to draw. Let's see what happens if we put the sharp point of the compass at one end of the segment and the pencil at the other, and then twirl the compass through a full circle. We'd get this:
+
+ 
+
+[[./the-joy-of-x-images/00088.jpeg]]
+
+ 
+
+ Of course, if we'd used the other endpoint as the center, we'd get this:
+
+ 
+
+[[./the-joy-of-x-images/00089.jpeg]]
+
+ 
+
+How about drawing both circles at the same time---for no good reason, just noodling?
+
+ 
+
+[[./the-joy-of-x-images/00090.jpeg]]
+
+ 
+
+Did it just hit you? A shiver of insight? Look at the diagram again. There's a curvy version of an equilateral triangle staring at us. Its top corner is the point where the circles intersect.
+
+ 
+
+[[./the-joy-of-x-images/00091.jpeg]]
+
+ 
+
+So now let's turn that into a real triangle, with straight sides, by drawing lines from the intersection point to the endpoints of the original segment. The resulting triangle sure looks equilateral.
+
+ 
+
+ [[./the-joy-of-x-images/00092.jpeg]]
+
+ 
+
+Having allowed intuition to guide us this far, now and only now is it time for logic to take over and finish the proof. For clarity, let's pan back to the full diagram and label the points of interest /A/, /B/, and /C/.
+
+ 
+
+[[./the-joy-of-x-images/00093.jpeg]]
+
+ 
+
+The proof almost proves itself. The sides /AC/ and /BC/ have the same length as the original segment /AB/, since that's how we constructed the circles; we used /AB/ as the radius for both. Since /AC/ and /BC/ are also radii, they too have this length, so all three lengths are equal, and the triangle is equilateral. QED.
+
+This argument has been around for centuries. In fact, it's Euclid's opening shot---the first proposition in Book I of the /Elements/. But the tendency has always been to present the final diagram with the artful circles already in place, which robs the student of the joy of discovering them. That's a pedagogical mistake. This is a proof that anyone can find. It can be new with each generation, if we teach it right.
+
+The key to this proof, clearly, was the inspired construction of the two circles. A more famous result in geometry can be proven by a similarly deft construction. It's the theorem that the angles of a triangle add up to 180 degrees.
+
+ In this case, the best proof is not Euclid's but an earlier one attributed to the Pythagoreans. It goes like this. Consider any triangle, and call its angles /a/, /b/, /c/.
+
+ 
+
+[[./the-joy-of-x-images/00094.jpeg]]
+
+ 
+
+Draw a line parallel to the base, going through the top corner.
+
+ 
+
+[[./the-joy-of-x-images/00095.jpeg]]
+
+ 
+
+Now we need to digress for a second to recall a property of parallel lines: if another line cuts across two parallel lines like so,
+
+ 
+
+[[./the-joy-of-x-images/00096.jpeg]]
+
+ 
+
+the angles labeled here as /a/ (known in the trade as alternate interior angles) are equal.
+
+ Let's apply this fact to the construction above in which we drew a line through the top corner of a triangle parallel to its base.
+
+ 
+
+[[./the-joy-of-x-images/00097.jpeg]]
+
+ 
+
+By invoking the equality of alternate interior angles, we see that the angle just to the left of the top corner must be equal to /a/. Likewise the angle at the top right is equal to /b/. So the angles /a/, /b/, and /c/ together form a straight angle---an angle of 180 degrees---which is what we sought to prove.
+
+This is one of the most bracing arguments in all of mathematics. It opens with a bolt of lightning, the construction of the parallel line. Once that line has been drawn, the proof practically rises off the table and walks by itself, like Dr. Frankenstein's creation.
+
+And who knows? If we highlight this other side of geometry---its playful, intuitive side, where a spark of imagination can be quickly fanned into a proof---maybe someday all students will remember geometry as the class where they learned to be logical /and/ creative.
+* 14. The Conic Conspiracy
+
+WHISPERING GALLERIES ARE remarkable acoustic spaces found beneath certain domes, vaults, or curved ceilings. A famous one is located outside the Oyster Bar restaurant in New York City's Grand Central Station. It's a fun place to take a date: the two of you can exchange sweet nothings while you're forty feet apart and separated by a bustling passageway. You'll hear each other clearly, but the passersby won't hear a word you're saying.
+
+ 
+
+[[./the-joy-of-x-images/00098.jpeg]]
+
+ 
+
+ To produce this effect, the two of you should stand at diagonally opposite corners of the space, facing the wall. That puts you each near a focus, a special point at which the sound of your voice gets focused as it reflects off the passageway's curved walls and ceiling. Ordinarily, the sound waves you produce travel in all directions and bounce off the walls at disparate times and places, scrambling them so much that they are inaudible when they arrive at the ear of a listener forty feet away (which is why the passersby can't hear what you're saying). But when you whisper at a /focus/, the reflected waves all arrive at the /same/ time at the other focus, thus reinforcing one another and allowing your words to be heard.
+
+Ellipses display a similar flair for focusing, though in a much simpler form. If we fashion a reflector in the shape of an ellipse, two particular points inside it (marked as /F/_{1} and /F/_{2} in the figure below) will act as foci in the following sense: all the rays emanating from a light source at one of those points will be reflected to the other.
+
+ 
+
+[[./the-joy-of-x-images/00099.jpeg]]
+
+ 
+
+Let me try to convey how amazing that is by restating it in a few ways.
+
+Suppose that Darth and Luke enjoy playing laser tag in an elliptical arena with mirrored walls. Both have agreed not to aim directly at the other---they have to zap each other with bank shots. Darth, not being particularly astute about geometry or optics, suggests they each stand at a focal point. “Fine,” says Luke, “as long as I get to take the first shot.” Well, it wouldn't be much of a duel, because Luke can't miss! No matter how foolishly he aims his laser, he'll always tag Darth. Every shot's a winner.
+
+ Or if pool is your game, imagine playing billiards on an elliptical table with a pocket at one focus. To set up a trick shot that is guaranteed to scratch every time, place the cue ball at the /other/ focus. No matter how you strike the ball and no matter where it caroms off the cushion, it'll always go into the pocket.
+
+ 
+
+[[./the-joy-of-x-images/00100.jpeg]]
+
+ 
+
+Parabolic curves and surfaces have an impressive focusing power of their own: each can take parallel incoming waves and focus them at a /single/ point. This feature of their geometry has been very useful in settings where light waves, sound waves, or other signals need to be amplified. For instance, parabolic microphones can be used to pick up hushed conversations and are therefore of interest in surveillance, espionage, and law enforcement. They also come in handy in nature recording, to capture birdsongs or animal grunts, and in televised sports, to listen in on a coach cursing at an official. Parabolic antennas can amplify radio waves in the same way, which is why satellite dishes for TV reception and giant radio telescopes for astronomy have their characteristically curved shapes.
+
+ This focusing property of parabolas is just as useful when deployed in reverse. Suppose you want to make a strongly directional beam of light, like that needed for spotlights or car headlights. On its own, a bulb---even a powerful one---typically wouldn't be good enough; it wastes too much light by shining it in all directions. But now place that bulb at the focus of a parabolic reflector, and voilà! The parabola creates a directional beam automatically. It takes the bulb's rays and, by reflecting them off the parabola's silvered inner surface, makes them all parallel.
+
+ 
+
+[[./the-joy-of-x-images/00101.jpeg]]
+
+ 
+
+Once you begin to appreciate the focusing abilities of parabolas and ellipses, you can't help but wonder if something deeper is at work here. Are these curves related in some more fundamental way?
+
+Mathematicians and conspiracy theorists have this much in common: we're suspicious of coincidences---especially convenient ones. There are no accidents. Things happen for a reason. While this mindset may be just a touch paranoid when applied to real life, it's a perfectly sane way to think about math. In the ideal world of numbers and shapes, strange coincidences usually /are/ clues that we're missing something. They suggest the presence of hidden forces at work.
+
+So let's look more deeply into the possible links between parabolas and ellipses. At first glance they seem an unlikely couple. Parabolas are arch-shaped and expansive, stretching out at both ends. Ellipses are oval-shaped, like squashed circles, closed and compact.
+
+ 
+
+ [[./the-joy-of-x-images/00102.jpeg]]
+
+ 
+
+But as soon as you move beyond their appearances and probe their inner anatomy, you start to notice how similar they are. They both belong to a royal family of curves, a genetic tie that becomes obvious---once you know what to look for.
+
+To explain how they're related, we have to recall what, exactly, these curves are.
+
+A parabola is commonly defined as the set of all points equidistant from a given point and a given line not containing that point. That's a mouthful of a definition, but it's actually pretty easy to understand once you translate it into pictures. Call the given point /F/, for “focus,” and call the line /L/.
+
+ 
+
+[[./the-joy-of-x-images/00103.gif]]
+
+ 
+
+Now, according to the definition, a parabola consists of all the points that lie just as far from /F/ as they do from /L/. For example, the point /P/ lying straight down from /F/, halfway to /L/, would certainly qualify:
+
+ 
+
+[[./the-joy-of-x-images/00104.jpeg]]
+
+ 
+
+Infinitely many other points /P/_{1}, /P/_{2}, . . . work too. They lie off to either side like this:
+
+ 
+
+[[./the-joy-of-x-images/00105.jpeg]]
+
+ 
+
+Here, the point /P/_{1} lies at the same distance, /d/_{1}, from the line as it does from the focus. The same is true for the point /P/_{2}, except now the shared distance is some other number, /d/_{2}. Taken together, all the points /P/ with this property form the parabola.
+
+The reason for calling /F/ the focus becomes clear if we think of the parabola as a curved mirror. It turns out (though I won't prove it) that if you shine a beam of light straight at a parabolic mirror, all the reflected rays will intersect simultaneously at the point /F/, producing an intensely focused spot of light.
+
+ 
+
+[[./the-joy-of-x-images/00106.jpeg]]
+
+ 
+
+ It works something like those old suntanning reflectors that fried a generation of faces, back in the days before anybody worried about skin cancer.
+
+Now let's turn to the corresponding story for ellipses. An ellipse is defined as the set of points the sum of whose distances from two given points is a constant. When rephrased in more down-to-earth language, this description provides a recipe for drawing an ellipse. Get a pencil, a sheet of paper, a corkboard, two pushpins, and a piece of string. Lay the paper on the board. Pin the ends of the string down through the paper, being careful to leave some slack. Then pull the string taut with the pencil to form an angle, as shown below. Begin drawing, keeping the string taut. After the pencil has gone all the way around both pins and returned to its starting point, the resulting curve is an ellipse.
+
+ 
+
+[[./the-joy-of-x-images/00107.jpeg]]
+
+ 
+
+Notice how this recipe implements the definition above, word for word. The pins play the role of the two given points. And the sum of the distances from them to a point on the curve always remains constant, no matter where the pencil is---because those distances always add up to the length of the string.
+
+So where are the ellipse's foci in this construction? At the pins. Again, I won't prove it, but those are the points that allow Luke and Darth to play their game of can't-miss laser tag and that give rise to a scratch-every-time pool table.
+
+ Parabolas and ellipses: Why is it that they, and only they, have such fantastic powers of focusing? What's the secret they share?
+
+They're both cross-sections of the surface of a cone.
+
+A cone? If you feel like that just came out of nowhere, that's precisely the point. The cone's role in all this has been hidden so far.
+
+To see how it's implicated, imagine slicing through a cone with a meat cleaver, somewhat like cutting through a salami, at progressively steeper angles. If the cut is level, the curve of intersection is a circle.
+
+ 
+
+[[./the-joy-of-x-images/00108.jpeg]]
+
+ 
+
+If instead the cone is sliced on a gentle bias, the resulting curve becomes an ellipse.
+
+ 
+
+[[./the-joy-of-x-images/00109.jpeg]]
+
+ 
+
+As the cuts become steeper, the ellipse gets longer and slimmer in its proportions. At a critical angle, when the bias gets so steep that it matches the slope of the cone itself, the ellipse turns into a parabola.
+
+ 
+
+[[./the-joy-of-x-images/00110.jpeg]]
+
+ 
+
+ So that's the secret: a parabola is an ellipse in disguise, in a certain limiting sense. No wonder it shares the ellipse's marvelous focusing ability. It's been passed down through the bloodline.
+
+In fact, circles, ellipses, and parabolas are all members of a larger, tight-knit family. They're collectively known as conic sections---curves obtained by cutting the surface of a cone with a plane. Plus there's one additional sibling: if the cone is sliced very steeply, on a bias greater than its own slope, the resulting incision forms a curve called a hyperbola. Unlike all the others, it comes in two pieces, not one.
+
+ 
+
+[[./the-joy-of-x-images/00111.jpeg]]
+
+ 
+
+These four types of curves appear even more intimately related when viewed from other mathematical perspectives. In algebra, they arise as the graphs of second-degree equations
+
+ 
+
+[[./the-joy-of-x-images/00112.jpeg]]
+
+ 
+
+ where the constants /A/, /B/, /C/, . . . determine whether the graph is a circle, ellipse, parabola, or hyperbola. In calculus, they arise as trajectories of objects tugged by the force of gravity.
+
+So it's no accident that planets move in elliptical orbits with the sun at one focus; or that comets sail through the solar system on elliptic, parabolic, or hyperbolic trajectories; or that a child's ball tossed to a parent follows a parabolic arc. They're all manifestations of the conic conspiracy.
+
+Focus on that the next time you play catch.
+* 15. Sine Qua Non
+  :PROPERTIES:
+  :CUSTOM_ID: calibre_pb_0
+  :CLASS: chaptertitle
+  :END:
+
+MY DAD HAD a friend named Dave who retired to Jupiter, Florida. We visited him for a family vacation when I was about twelve or so, and something he showed us made an indelible impression on me.
+
+Dave liked to chart the times of the glorious sunrises and sunsets he could watch from his deck all year long. Every day he marked two dots on his chart, and after many months he noticed something curious. The two curves looked like opposing waves. One usually rose while the other fell; when sunrise was earlier, sunset was later.
+
+ 
+
+[[./the-joy-of-x-images/00113.jpeg]]
+
+ 
+
+ But there were exceptions. For the last three weeks of June and for most of December and early January, sunrise and sunset both came later each day, giving the waves a slightly lopsided appearance.
+
+Still, the message of the curves was unmistakable: the oscillating gap between them showed the days growing longer and shorter with the changing of the seasons. By subtracting the lower curve from the upper one, Dave also figured out how the number of hours of daylight varied throughout the year. To his amazement, /this/ curve wasn't lopsided at all. It was beautifully symmetrical.
+
+ 
+
+[[./the-joy-of-x-images/00114.jpeg]]
+
+ 
+
+What he was looking at was a nearly perfect sine wave. You may remember having heard about sine waves if you took trigonometry in high school, although your teacher probably talked more about the sine function, a fundamental tool for quantifying how the sides and angles of a triangle relate to one another. That was trigonometry's original killer app, of great utility to ancient astronomers and surveyors.
+
+ Yet /tri/gonometry, belying its much too modest name, now goes far beyond the measurement of /tri/angles. By quantifying circles as well, it has paved the way for the analysis of anything that repeats, from ocean waves to brain waves. It's the key to the mathematics of cycles.
+
+To see how trig connects circles, triangles, and waves, imagine a little girl going round and round on a Ferris wheel.
+
+ 
+
+[[./the-joy-of-x-images/00115.jpeg]]
+
+ 
+
+She and her mom, who both happen to be mathematically inclined, have decided this is a perfect opportunity for an experiment. The girl takes a GPS gadget with her on the ride to record her altitude, moment by moment, as the wheel carries her up, then thrillingly over the top and back toward the ground, then up and around again, and so on. The results look like this:
+
+ 
+
+[[./the-joy-of-x-images/00116.jpeg]]
+
+ 
+
+ This shape is a sine wave. It arises whenever one tracks the horizontal or vertical excursions of something---or someone---moving in a circle.
+
+How is this sine wave related to the sine function discussed in trig class? Well, suppose we examine a snapshot of the girl. At the moment shown, she's at some angle, call it /a/, relative to the dashed line in the diagram.
+
+ 
+
+[[./the-joy-of-x-images/00117.jpeg]]
+
+ 
+
+For convenience, let's suppose the hypotenuse of the right triangle shown---which is also the wheel's radius---is 1 unit long. Then sin /a/ (pronounced “sine of /a/”) tells us how high the girl is. More precisely, sin /a/ is defined as the girl's altitude measured from the center of the wheel when she's located at the angle /a/.
+
+As she goes round and round, her angle /a/ will progressively increase. Eventually it exceeds 90 degrees, at which point we can no longer regard /a/ as an angle in a right triangle. Does that mean trig no longer applies?
+
+No. Undeterred as usual, mathematicians simply enlarge the definition of the sine function to allow for /any/ angle, not just those less than 90 degrees, and then define “sin /a/” as the girl's height above or below the center of the circle. The corresponding graph of sin /a/, as /a/ keeps increasing (or even goes negative, if the wheel reverses direction), is what we mean by a sine wave. It repeats itself every time /a/ changes by 360 degrees, corresponding to a full revolution.
+
+ This same sort of conversion of circular motion into sine waves is a pervasive, though often unnoticed, part of our daily experience. It creates the hum of the fluorescent lights overhead in our offices, a reminder that somewhere in the power grid, generators are spinning at sixty cycles per second, converting their rotary motion into alternating current, the electrical sine waves on which modern life depends. When you speak and I hear, both our bodies are using sine waves---yours in the vibrations of your vocal cords to produce the sounds, and mine in the swaying of the hair cells in my ears to receive them. If we open our hearts to these sine waves and tune in to their silent thrumming, they have the power to move us. There's something almost spiritual about them.
+
+When a guitar string is plucked or when children jiggle a jump rope, the shape that appears is a sine wave. The ripples on a pond, the ridges of sand dunes, the stripes of a zebra---all are manifestations of nature's most basic mechanism of pattern formation: the emergence of sinusoidal structure from a background of bland uniformity.
+
+ 
+
+[[./the-joy-of-x-images/00118.jpeg]]
+
+
+
+
+
+
+
+[[./the-joy-of-x-images/00119.jpeg]]
+
+
+
+ [[./the-joy-of-x-images/00120.jpeg]]
+
+ 
+
+There are deep mathematical reasons for this. Whenever a state of featureless equilibrium loses stability---for whatever reason, and by whatever physical, biological, or chemical process---the pattern that appears first is a sine wave, or a combination of them.
+
+Sine waves are the atoms of structure. They're nature's building blocks. Without them there'd be nothing, giving new meaning to the phrase “sine qua non.”
+
+In fact, the words are literally true. Quantum mechanics describes real atoms, and hence all of matter, as packets of sine waves. Even at the cosmological scale, sine waves form the seeds of all that exists. Astronomers have probed the spectrum (the pattern of sine waves) of the cosmic microwave background and found that their measurements match the predictions of inflationary cosmology, the leading theory for the birth and growth of the universe. So it seems that out of a featureless Big Bang, primordial sine waves---ripples in the density of matter and energy---emerged spontaneously and spawned the stuff of the cosmos.
+
+ Stars. Galaxies. And, ultimately, little kids riding Ferris wheels.
+* 16. Take It to the Limit
+  :PROPERTIES:
+  :CUSTOM_ID: calibre_pb_0
+  :CLASS: chaptertitle
+  :END:
+
+IN MIDDLE SCHOOL my friends and I enjoyed chewing on the classic conundrums. What happens when an irresistible force meets an immovable object? Easy---they both explode. Philosophy's trivial when you're thirteen.
+
+But one puzzle bothered us: If you keep moving halfway to the wall, will you ever get there? Something about this one was deeply frustrating, the thought of getting closer and closer and yet never quite making it. (There's probably a metaphor for teenage angst in there somewhere.) Another concern was the thinly veiled presence of infinity. To reach the wall you'd need to take an infinite number of steps, and by the end they'd become infinitesimally small. Whoa.
+
+Questions like this have always caused headaches. Around 500 B.C., Zeno of Elea posed four paradoxes about infinity that puzzled his contemporaries and that may have been partly to blame for infinity's banishment from mathematics for centuries thereafter. In Euclidean geometry, for example, the only constructions allowed were those that involved a finite number of steps. The infinite was considered too ineffable, too unfathomable, and too hard to make logically rigorous.
+
+But Archimedes, the greatest mathematician of antiquity, realized the power of the infinite. He harnessed it to solve problems that were otherwise intractable and in the process came close to inventing calculus---nearly 2,000 years before Newton and Leibniz.
+
+ In the coming chapters we'll delve into the great ideas at the heart of calculus. But for now I'd like to begin with the first beautiful hints of them, visible in ancient calculations about circles and pi.
+
+Let's recall what we mean by “pi.” It's a ratio of two distances. One of them is the diameter, the distance /across/ the circle through its center. The other is the circumference, the distance /around/ the circle. “Pi” is defined as their ratio, the circumference divided by the diameter.
+
+ 
+
+[[./the-joy-of-x-images/00121.jpeg]]
+
+ 
+
+If you're a careful thinker, you might be worried about something already. How do we know that pi is the same number for all circles? Could it be different for big circles and little circles? The answer is no, but the proof isn't trivial. Here's an intuitive argument.
+
+Imagine using a photocopier to reduce an image of a circle by, say, 50 percent. Then /all/ distances in the picture---including the circumference and the diameter---would shrink in proportion by 50 percent. So when you divide the new circumference by the new diameter, that 50 percent change would cancel out, leaving the ratio between them unaltered. That ratio is pi.
+
+ Of course, this doesn't tell us how big pi is. Simple experiments with strings and dishes are good enough to yield a value near 3, or if you're more meticulous, [[./the-joy-of-x-images/00122.gif]]. But suppose we want to find pi exactly or at least approximate it to any desired accuracy. What then? This was the problem that confounded the ancients.
+
+Before turning to Archimedes's brilliant solution, we should mention one other place where pi appears in connection with circles. The area of a circle (the amount of space inside it) is given by the formula
+
+ 
+
+[[./the-joy-of-x-images/00123.jpeg]]
+
+ 
+
+Here /A/ is the area, π is the Greek letter pi, and /r/ is the radius of the circle, defined as half the diameter.
+
+ 
+
+[[./the-joy-of-x-images/00124.jpeg]]
+
+ 
+
+All of us memorized this formula in high school, but where does it come from? It's not usually proven in geometry class. If you went on to take calculus, you probably saw a proof of it there, but is it really necessary to use calculus to obtain something so basic?
+
+Yes, it is.
+
+What makes the problem difficult is that circles are round. If they were made of straight lines, there'd be no issue. Finding the areas of triangles and squares is easy. But working with curved shapes like circles is hard.
+
+The key to thinking mathematically about curved shapes is to pretend they're made up of lots of little straight pieces. That's not really true, but it works . . . as long as you take it to the limit and imagine /infinitely/ many pieces, each infinitesimally small. That's the crucial idea behind all of calculus.
+
+ Here's one way to use it to find the area of a circle. Begin by chopping the area into four equal quarters, and rearrange them like so.
+
+ 
+
+[[./the-joy-of-x-images/00125.jpeg]]
+
+ 
+
+The strange scalloped shape on the bottom has the same area as the circle, though that might seem pretty uninformative since we don't know its area either. But at least we know two important facts about it. First, the two arcs along its bottom have a combined length equal to half the circumference of the original circle (because the other half of the circumference is accounted for by the two arcs on top). Since the whole circumference is pi times the diameter, half of it is pi times /half/ the diameter or, equivalently, pi times the radius /r/. That's why the diagram above shows π/r/ as the combined length of the arcs at the bottom of the scalloped shape. Second, the straight sides of the slices have a length of /r/, since each of them was originally a radius of the circle.
+
+Next, repeat the process, but this time with eight slices, stacked alternately as before.
+
+ 
+
+[[./the-joy-of-x-images/00126.jpeg]]
+
+ 
+
+The scalloped shape looks a bit less bizarre now. The arcs on the top and the bottom are still there, but they're not as pronounced. Another improvement is the left and right sides of the scalloped shape don't tilt as much as they used to. Despite these changes, the two facts above continue to hold: the arcs on the bottom still have a net length of π/r/ and each side still has a length of /r/. And of course the scalloped shape still has the same area as before---the area of the circle we're seeking---since it's just a rearrangement of the circle's eight slices.
+
+As we take more and more slices, something marvelous happens: the scalloped shape approaches a rectangle. The arcs become flatter and the sides become almost vertical.
+
+ 
+
+[[./the-joy-of-x-images/00127.jpeg]]
+
+ 
+
+ In the limit of /infinitely/ many slices, the shape /is/ a rectangle. Just as before, the two facts still hold, which means this rectangle has a bottom of width π/r/ and a side of height /r/.
+
+ 
+
+[[./the-joy-of-x-images/00128.jpeg]]
+
+ 
+
+But now the problem is easy. The area of a rectangle equals its width times its height, so multiplying π/r/ times /r/ yields an area of π/r/² for the rectangle. And since the rearranged shape always has the same area as the circle, that's the answer for the circle too!
+
+What's so charming about this calculation is the way infinity comes to the rescue. At every finite stage, the scalloped shape looks weird and unpromising. But when you take it to the limit---when you finally get to the wall---it becomes simple and beautiful, and everything becomes clear. That's how calculus works at its best.
+
+Archimedes used a similar strategy to approximate pi. He replaced a circle with a polygon with many straight sides and then kept doubling the number of sides to get closer to perfect roundness. But rather than settling for an approximation of uncertain accuracy, he methodically bounded pi by sandwiching the circle between inscribed and circumscribed polygons, as shown below for 6-, 12-, and 24-sided figures.
+
+ 
+
+[[./the-joy-of-x-images/00129.jpeg]]
+
+ 
+
+ Then he used the Pythagorean theorem to work out the perimeters of these inner and outer polygons, starting with the hexagon and bootstrapping his way up to 12, 24, 48, and, ultimately, 96 sides. The results for the 96-gons enabled him to prove that
+
+ 
+
+[[./the-joy-of-x-images/00130.jpeg]]
+
+ 
+
+In decimal notation (which Archimedes didn't have), this means pi is between 3.1408 and 3.1429.
+
+This approach is known as the method of exhaustion because of the way it traps the unknown number pi between two known numbers that squeeze it from either side. The bounds tighten with each doubling, thus exhausting the wiggle room for pi.
+
+In the limit of infinitely many sides, both the upper and lower bounds would converge to pi. Unfortunately, this limit isn't as simple as the earlier one, where the scalloped shape morphed into a rectangle. So pi remains as elusive as ever. We can discover more and more of its digits---the current record is over 2.7 trillion decimal places---but we'll never know it completely.
+
+Aside from laying the groundwork for calculus, Archimedes taught us the power of approximation and iteration. He bootstrapped a good estimate into a better one, using more and more straight pieces to approximate a curved object with increasing accuracy.
+
+More than two millennia later, this strategy matured into the modern field of numerical analysis. When engineers use computers to design cars that are optimally streamlined, or when biophysicists simulate how a new chemotherapy drug latches onto a cancer cell, they are using numerical analysis. The mathematicians and computer scientists who pioneered this field have created highly efficient, repetitive algorithms, running billions of times per second, that enable computers to solve problems in every aspect of modern life, from biotech to Wall Street to the Internet. In each case, the strategy is to find a series of approximations that converge to the correct answer as a limit.
+
+ And there's no limit to where that'll take us.
+
+
+
+

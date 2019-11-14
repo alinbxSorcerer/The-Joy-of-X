@@ -1,0 +1,484 @@
+#+TITLE: Two.Relationships
+
+* 7. The Joy of X
+
+NOW IT'S TIME to move on from grade-school arithmetic to high-school math. Over the next ten chapters we'll be revisiting algebra, geometry, and trig. Don't worry if you've forgotten them all---there won't be any tests this time around. Instead of worrying about the details of these subjects, we have the luxury of concentrating on their most beautiful, important, and far-reaching ideas.
+
+Algebra, for example, may have struck you as a dizzying mix of symbols, definitions, and procedures, but in the end they all boil down to just two activities---solving for x and working with formulas.
+
+Solving for x is detective work. You're searching for an unknown number, x. You've been handed a few clues about it, either in the form of an equation like 2x + 3 = 7 or, less conveniently, in a convoluted verbal description of it (as in those scary word problems). In either case, the goal is to identify x from the information given.
+
+Working with formulas, by contrast, is a blend of art and science. Instead of dwelling on a particular x, you're manipulating and massaging relationships that continue to hold even as the numbers in them change. These changing numbers are called variables, and they are what truly distinguishes algebra from arithmetic. The formulas in question might express elegant patterns about numbers for their own sake. This is where algebra meets art. Or they might express relationships between numbers in the real world, as they do in the laws of nature for falling objects or planetary orbits or genetic frequencies in a population. This is where algebra meets science.
+
+ This division of algebra into two grand activities is not standard (in fact, I just made it up), but it seems to work pretty well. In the next chapter I'll have more to say about solving for x, so for now let's focus on formulas, starting with some easy examples to clarify the ideas.
+
+A few years ago, my daughter Jo realized something about her big sister, Leah. “Dad, there's always a number between my age and Leah's. Right now I'm six and Leah's eight, and seven is in the middle. And even when we're old, like when I'm twenty and she's twenty-two, there will still be a number in the middle!”
+
+Jo's observation qualifies as algebra (though no one but a proud father would see it that way) because she was noticing a relationship between two ever-changing variables: her age, x, and Leah's age, y. No matter how old both of them are, Leah will always be two years older: y = x + 2.
+
+Algebra is the language in which such patterns are most naturally phrased. It takes some practice to become fluent in algebra, because it's loaded with what the French call /faux amis/, “false friends”: a pair of words, each from a different language (in this case, English and algebra), that sound related and seem to mean the same thing but that actually mean something horribly different from each other when translated.
+
+For example, suppose the length of a hallway is y when measured in yards, and /f/ when measured in feet. Write an equation that relates y to /f/.
+
+ My friend Grant Wiggins, an education consultant, has been posing this problem to students and faculty for years. He says that in his experience, students get it wrong more than half the time, even if they have recently taken and passed an algebra course.
+
+If you think the answer is y = 3/f/, welcome to the club.
+
+It seems like such a straightforward translation of the sentence “One yard equals three feet.” But as soon as you try a few numbers, you'll see that this formula gets everything backward. Say the hallway is 10 yards long; everyone knows that's 30 feet. Yet when you plug in y = 10 and /f/ = 30, the formula doesn't work!
+
+The correct formula is /f/ = 3y. Here 3 really means “3 feet per yard.” When you multiply it by y in yards, the units of yards cancel out and you're left with units of feet, as you should be.
+
+Checking that the units cancel properly helps avoid this kind of blunder. For example, it could have saved the Verizon customer service reps (discussed in chapter 5) from confusing dollars and cents.
+
+Another kind of formula is known as an identity. When you factored or multiplied polynomials in algebra class, you were working with identities. You can use them now to impress your friends with numerical parlor tricks. Here's one that impressed the physicist Richard Feynman, no slouch himself at mental math:
+
+ 
+
+#+BEGIN_QUOTE
+  When I was at Los Alamos I found out that Hans Bethe was absolutely topnotch at calculating. For example, one time we were putting some numbers into a formula, and got to 48 squared. I reach for the Marchant calculator, and he says, “That's 2,300.” I begin to push the buttons, and he says, “If you want it exactly, it's 2,304.”
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+   The machine says 2,304. “Gee! That's pretty remarkable!” I say.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+  “Don't you know how to square numbers near 50?” he says. “You square 50---that's 2,500---and subtract 100 times the difference of your number from 50 (in this case it's 2), so you have 2,300. If you want the correction, square the difference and add it on. That makes 2,304.”
+#+END_QUOTE
+
+ 
+
+Bethe's trick is based on the identity
+
+ 
+
+[[./the-joy-of-x-images/00035.jpeg]]
+
+ 
+
+He had memorized that equation and was applying it for the case where x is --2, corresponding to the number 48 = 50 -- 2.
+
+For an intuitive proof of this formula, imagine a square patch of carpet that measures 50 + x on each side.
+
+ 
+
+[[./the-joy-of-x-images/00036.jpeg]]
+
+ 
+
+ Then its area is (50 + x) squared, which is what we're looking for. But the diagram above shows that this area is made of a 50-by-50 square (this contributes the 2,500 to the formula), two rectangles of dimensions 50 by x (each contributes an area of 50x, for a combined total of 100x), and finally the little x-by-x square gives an area of x squared, the final term in Bethe's formula.
+
+Relationships like these are not just for theoretical physicists. An identity similar to Bethe's is relevant to anyone who has money invested in the stock market. Suppose your portfolio drops catastrophically by 50 percent one year and then gains 50 percent the next. Even after that dramatic recovery, you'd still be down 25 percent. To see why, observe that a 50 percent loss multiplies your money by 0.50, and a 50 percent gain multiplies it by 1.50. When those happen back to back, your money multiplies by 0.50 times 1.50, which equals 0.75---in other words, a 25 percent loss.
+
+In fact, you /never/ get back to even when you lose and gain by the same percentage in consecutive years. With algebra we can understand why. It follows from the identity
+
+ 
+
+[[./the-joy-of-x-images/00037.jpeg]]
+
+
+In the down year the portfolio shrinks by a factor 1 -- x (where x = 0.50 in the example above), and then grows by a factor 1 + x the following year. So the net change is a factor of
+
+[[./the-joy-of-x-images/00038.jpeg]]
+
+and according to the formula above, this equals
+
+[[./the-joy-of-x-images/00039.gif]]
+
+The point is that this expression is /always/ less than 1 for any x other than 0. So you never completely recoup your losses.
+
+Needless to say, not every relationship between variables is as straightforward as those above. Yet the allure of algebra is seductive, and in gullible hands it spawns such silliness as a formula for the socially acceptable age difference in a romance. According to some sites on the Internet, if your age is x, polite society will disapprove if you date someone younger than x/2 + 7.
+
+In other words, it would be creepy for anyone over eighty-two to eye my forty-eight-year-old wife, even if she were available. But eighty-one? No problem.
+
+Ick. Ick. Ick . . .
+* 8. Finding Your Roots
+
+FOR MORE THAN 2,500 years, mathematicians have been obsessed with solving for x. The story of their struggle to find the roots ---the solutions---of increasingly complicated equations is one of the great epics in the history of human thought.
+
+One of the earliest such problems perplexed the citizens of Delos around 430 B.C. Desperate to stave off a plague, they consulted the oracle of Delphi, who advised them to double the volume of their cube-shaped altar to Apollo. Unfortunately, it turns out that doubling a cube's volume required them to construct the cube root of 2, a task that is now known to be impossible, given their restriction to use nothing but a straightedge and compass, the only tools allowed in Greek geometry.
+
+Later studies of similar problems revealed another irritant, a nagging little thing that wouldn't go away: even when solutions were possible, they often involved square roots of negative numbers. Such solutions were long derided as sophistic or fictitious because they seemed nonsensical on their face.
+
+Until the 1700s or so, mathematicians believed that square roots of negative numbers simply couldn't exist.
+
+ They couldn't be positive numbers, after all, since a positive times a positive is always positive, and we're looking for numbers whose square is negative. Nor could negative numbers work, since a negative times a negative is, again, /positive/. There seemed to be no hope of finding numbers that when multiplied by themselves would give negative answers.
+
+We've seen crises like this before. They occur whenever an existing operation is pushed too far, into a domain where it no longer seems sensible. Just as subtracting bigger numbers from smaller ones gave rise to negative numbers (chapter 3) and division spawned fractions and decimals (chapter 5), the freewheeling use of square roots eventually forced the universe of numbers to expand . . . again.
+
+Historically, this step was the most painful of all. The square root of --1 still goes by the demeaning name of /i/, for “imaginary.”
+
+This new kind of number (or if you'd rather be agnostic, call it a symbol, not a number) is defined by the property that
+
+ 
+
+[[./the-joy-of-x-images/00040.gif]]
+
+ 
+
+It's true that /i/ can't be found anywhere on the number line. In that respect it's much stranger than zero, negative numbers, fractions, or even irrational numbers, all of which---weird as they are---still have their places in line.
+
+But with enough imagination, our minds can make room for /i/ as well. It lives off the number line, at right angles to it, on its own imaginary axis. And when you fuse that imaginary axis to the ordinary “real” number line, you create a 2-D space---a plane---where a new species of numbers lives.
+
+ 
+
+ [[./the-joy-of-x-images/00041.jpeg]]
+
+ 
+
+These are the complex numbers. Here “complex” doesn't mean “complicated”; it means that two types of numbers, real and imaginary, have bonded together to form a complex, a hybrid number like 2 + 3/i/.
+
+Complex numbers are magnificent, the pinnacle of number systems. They enjoy all the same properties as real numbers---you can add and subtract them, multiply and divide them---but they are /better/ than real numbers because they always have roots. You can take the square root or cube root or any root of a complex number, and the result will still be a complex number.
+
+Better yet, a grand statement called the fundamental theorem of algebra says that the roots of any polynomial are always complex numbers. In that sense they're the end of the quest, the holy grail. The universe of numbers need never expand again. Complex numbers are the culmination of the journey that began with 1.
+
+You can appreciate the utility of complex numbers (or find it more plausible) if you know how to visualize them. The key is to understand what multiplying by /i/ looks like. Suppose we multiply an arbitrary positive number, say 3, by /i/. The result is the imaginary number 3/i/.
+
+ 
+
+ [[./the-joy-of-x-images/00042.jpeg]]
+
+ 
+
+So multiplying by /i/ produces a rotation counterclockwise by a quarter turn. It takes an arrow of length 3 pointing east and changes it into a new arrow of the same length but now pointing north.
+
+Electrical engineers love complex numbers for exactly this reason. Having such a compact way to represent 90-degree rotations is very useful when working with alternating currents and voltages, or with electric and magnetic fields, because these often involve oscillations or waves that are a quarter cycle (i.e., 90 degrees) out of phase.
+
+In fact, complex numbers are indispensable to all engineers. In aerospace engineering they eased the first calculations of the lift on an airplane wing. Civil and mechanical engineers use them routinely to analyze the vibrations of footbridges, skyscrapers, and cars driving on bumpy roads.
+
+The 90-degree rotation property also sheds light on what /i/² = --1 really means. If we multiply a positive number by /i/², the corresponding arrow rotates 180 degrees, flipping from east to west, because the two 90-degree rotations (one for each factor of /i/) combine to make a 180-degree rotation.
+
+ 
+
+ [[./the-joy-of-x-images/00043.jpeg]]
+
+ 
+
+But multiplying by --1 produces the very same 180-degree flip. That's the sense in which /i/² = --1.
+
+Computers have breathed new life into complex numbers and the age-old problem of root finding. When they're not being used for Web surfing or e-mail, the machines on our desks can reveal things the ancients never dreamed of.
+
+In 1976, my Cornell colleague John Hubbard began looking at the dynamics of Newton's method, a powerful algorithm for finding roots of equations in the complex plane. The method takes a starting point (an approximation to the root) and does a certain computation that improves it. By doing this repeatedly, always using the previous point to generate a better one, the method bootstraps its way forward and rapidly homes in on a root.
+
+Hubbard was interested in problems with /multiple/ roots. In that case, which root would the method find? He proved that if there were just two roots, the closer one would always win. But if there were three or more roots, he was baffled. His earlier proof no longer applied.
+
+ So Hubbard did an experiment. A /numerical/ experiment.
+
+He programmed a computer to run Newton's method. Then he told it to color-code millions of different starting points according to which root they approached and to shade them according to how fast they got there.
+
+Before he peeked at the results, he anticipated that the roots would most quickly attract the points nearby and thus should appear as bright spots in a solid patch of color. But what about the boundaries between the patches? Those he couldn't picture, at least not in his mind's eye.
+
+The computer's answer was astonishing.
+
+ 
+
+[[./the-joy-of-x-images/00044.jpeg]]
+
+ 
+
+ The borderlands looked like psychedelic hallucinations. The colors intermingled there in an almost impossibly promiscuous manner, touching each other at infinitely many points and always in a three-way. In other words, wherever two colors met, the third would always insert itself and join them.
+
+Magnifying the boundaries revealed patterns within patterns.
+
+ 
+
+[[./the-joy-of-x-images/00045.jpeg]]
+
+ 
+
+The structure was a fractal ---an intricate shape whose inner structure repeated at finer and finer scales.
+
+Furthermore, chaos reigned near the boundary. Two points might start very close together, bounce side by side for a while, and then veer off to different roots. The winning root was as unpredictable as the winning number in a game of roulette. Little things---tiny, imperceptible changes in the initial conditions---could make all the difference.
+
+ Hubbard's work was an early foray into what's now called complex dynamics, a vibrant blend of chaos theory, complex analysis, and fractal geometry. In a way it brought geometry back to its roots. In 600 B.C. a manual written in Sanskrit for temple builders in India gave detailed geometric instructions for computing square roots, needed in the design of ritual altars. More than 2,500 years later, in 1976, mathematicians were still searching for roots, but now the instructions were written in binary code.
+
+Some imaginary friends you never outgrow.
+* 9. My Tub Runneth Over
+
+UNCLE IRV WAS my dad's brother as well as his partner in a shoe store they owned in our town. He handled the business end of things and mostly stayed in the office upstairs, because he was good with numbers and not so good with the customers.
+
+When I was about ten or eleven, Uncle Irv gave me my first word problem. It sticks with me to this day, probably because I got it wrong and felt embarrassed.
+
+It had to do with filling a bathtub. If the cold-water faucet can fill the tub in a half-hour, and the hot-water faucet can fill it in an hour, how long will it take to fill the tub when they're running together?
+
+ 
+
+[[./the-joy-of-x-images/00046.jpeg]]
+
+ 
+
+I'm pretty sure I guessed forty-five minutes, as many people would. Uncle Irv shook his head and grinned. Then, in his high-pitched nasal voice, he proceeded to school me.
+
+“Steven,” he said, “figure out how much water pours into the tub in a minute.” The cold water fills the tub in thirty minutes, so in one minute it fills [[./the-joy-of-x-images/00047.gif]] of the tub. But the hot water runs slower---it takes sixty minutes, which means it fills only [[./the-joy-of-x-images/00048.gif]] of the tub per minute. So when they're both running, they fill
+
+ 
+
+[[./the-joy-of-x-images/00049.jpeg]]
+
+ 
+
+of the tub in a minute.
+
+To add those fractions, observe that 60 is their lowest common denominator. Then, rewriting [[./the-joy-of-x-images/00050.gif]] as [[./the-joy-of-x-images/00051.gif]], we get
+
+ 
+
+[[./the-joy-of-x-images/00052.jpeg]]
+
+ 
+
+which means that the two faucets working together fill [[./the-joy-of-x-images/00053.gif]] of the tub per minute. So they fill the whole tub in twenty minutes.
+
+Over the years since then, I've thought about this bathtub problem many times, always with affection for both Uncle Irv and the question itself. There are broader lessons to be learned here---lessons about how to solve problems approximately when you can't solve them exactly, and how to solve them intuitively, for the pleasure of the Aha! moment.
+
+Consider my initial guess of forty-five minutes. By looking at an extreme, or limiting, case, we can see that that answer can't possibly be right. In fact, it's absurd. To understand why, suppose the hot water wasn't turned on. Then the cold water---on its own---would fill the tub in thirty minutes. So whatever the answer to Uncle Irv's question is, it has to be less than this. After all, running the hot water along with the cold can only help.
+
+ Admittedly, this conclusion is not as informative as the exact answer of twenty minutes we found by Uncle Irv's method, but it has the advantage of not requiring any calculation.
+
+A different way to simplify the problem is to pretend the two faucets run at the same rate. Say each can fill the tub in thirty minutes (meaning that the hot water runs just as fast as the cold). Then the answer would be obvious. Because of the symmetry of the new situation, the two perfectly matched faucets would together fill the tub in fifteen minutes, since each does half the work.
+
+This instantly tells us that Uncle Irv's scenario must take longer than fifteen minutes. Why? Because fast plus fast beats slow plus fast. Our make-believe symmetrical problem has two fast faucets, whereas Uncle Irv's has one slow, one fast. And since fifteen minutes is the answer when they're both fast, Uncle Irv's tub can only take longer.
+
+The upshot is that by considering two hypothetical cases---one with the hot water off, and another with it matched to the cold water---we learned that the answer lies somewhere between fifteen and thirty minutes. In much harder problems where it may be impossible to find an exact answer---not just in math but in other domains as well---this sort of partial information can be very valuable.
+
+Even if we're lucky enough to come up with an exact answer, that's still no cause for complacency. There may be easier or clearer ways to find the solution. This is one place where math allows for creativity.
+
+ For example, instead of Uncle Irv's textbook method, with its fractions and common denominators, here's a more playful route to the same result. It dawned on me some years later, when I tried to pinpoint why the problem is so confusing in the first place and realized it's because of the faucets' different speeds. That makes it a headache to keep track of what each faucet contributes, especially if you picture the hot and cold water sloshing together and mixing in the tub.
+
+So let's keep the two types of water apart, at least in our minds. Instead of a single bathtub, imagine two assembly lines of them, two separate conveyor belts shuttling bathtubs past a hot-water faucet on one side and a cold-water faucet on the other.
+
+ 
+
+[[./the-joy-of-x-images/00054.jpeg]]
+
+ 
+
+ Each faucet stands in place and fills its own tubs---no mixing allowed. And as soon as a tub fills up, it moves on down the line, making way for the next one.
+
+Now everything becomes easy. In one hour, the hot-water faucet fills one tub, while the cold-water faucet fills two (since each takes a half-hour). That amounts to three tubs per hour, or one tub every twenty minutes. Eureka!
+
+So why do so many people, including my childhood self, blunder into guessing forty-five minutes? Why is it so tempting to split the difference of thirty and sixty minutes? I'm not sure, but it seems to be a case of faulty pattern recognition. Maybe the bathtub problem is being conflated with others where splitting the difference would make sense. My wife explained it to me by analogy. Imagine you're helping a little old lady cross the street. Without your help, it would take her sixty seconds, while you'd zip across in thirty seconds. How long, then, would it take the two of you, walking arm in arm? A compromise around forty-five seconds seems plausible because when granny is clinging to your elbow, she slows you down and you speed her up.
+
+The difference here is that you and granny affect each other's speeds, but the faucets don't. They're independent. Apparently our subconscious minds don't spot this distinction, at least not when they're leaping to the wrong conclusion.
+
+The silver lining is that even wrong answers can be educational . . . as long as you realize they're wrong. They expose misguided analogies and other woolly thinking, and bring the crux of the problem into sharper relief.
+
+Other classic word problems are expressly designed to trick their victims by misdirection, like a magician's sleight of hand. The phrasing of the question sets a trap. If you answer by instinct, you'll probably fall for it.
+
+ Try this one. Suppose three men can paint three fences in three hours. How long would it take one man to paint one fence?
+
+It's tempting to blurt out “one hour.” The words themselves nudge you that way. The drumbeat in the first sentence---three men, three fences, three hours---catches your attention by establishing a rhythm, so when the next sentence repeats the pattern with one man, one fence, \_\_\_\_ hours, it's hard to resist filling in the blank with “one.” The parallel construction suggests an answer that's linguistically right but mathematically wrong.
+
+The correct answer is three hours.
+
+If you /visualize/ the problem---mentally picture three men painting three fences and all finishing after three hours, just as the problem states---the right answer becomes clear. For all three fences to be done after three hours, each man must have spent three hours on his.
+
+ 
+
+[[./the-joy-of-x-images/00055.jpeg]]
+
+ 
+
+The undistracted reasoning that this problem requires is one of the most valuable things about word problems. They force us to pause and think, often in unfamiliar ways. They give us practice in being mindful.
+
+ Perhaps even more important, word problems give us practice in thinking not just about numbers, but about /relationships/ between numbers---how the flow rates of the faucets affect the time required to fill the tub, for example. And that is the essential next step in anyone's math education. Understandably, a lot of us have trouble with it; relationships are much more abstract than numbers. But they're also much more powerful. They express the inner logic of the world around us. Cause and effect, supply and demand, input and output, dose and response---all involve pairs of numbers and the relationships between them. Word problems initiate us into this way of thinking.
+
+However, Keith Devlin raises an interesting criticism in his essay “The problem with word problems.” His point is that these problems typically assume you understand the rules of the game and agree to play by them, even though they're often artificial, sometimes absurdly so. For example, in our problem about three men painting three fences in three hours, it was implicit that (1) all three men paint at the same rate and (2) they all paint steadily, never slowing down or speeding up. Both assumptions are unrealistic. You're supposed to know not to worry about that and go along with the gag, because otherwise the problem would be too complicated and you wouldn't have enough information to solve it. You'd need to know exactly how much each painter slows down as he gets tired in the third hour, how often each one stops for a snack, and so on.
+
+Those of us who teach math should try to turn this bug into a feature. We should be up front about the fact that word problems force us to make simplifying assumptions. That's a valuable skill---it's called mathematical modeling. Scientists do it all the time when they apply math to the real world. But they, unlike the authors of most word problems, are usually careful to state their assumptions explicitly.
+
+ So thanks, Uncle Irv, for that first lesson. Humiliating? Yes. Unforgettable? Yes, that too . . . but in a good way.
+* 10. Working Your Quads
+
+THE QUADRATIC FORMULA is the Rodney Dangerfield of algebra. Even though it's one of the all-time greats, it don't get no respect.
+
+Professionals certainly aren't enamored of it. When mathematicians and physicists are asked to list the top ten most beautiful or important equations of all time, the quadratic formula never makes the cut. Oh sure, everybody swoons over 1 + 1 = 2, and /E/ = /mc/², and the pert little Pythagorean theorem, strutting like it's all that just because /a/² + /b/² = /c/². But the quadratic formula? Not a chance.
+
+Admittedly, it's unsightly. Some students prefer to sound it out, treating it as a ritual incantation: “x equals negative /b/, plus or minus the square root of /b/ squared minus four /a c/, all over two /a/.” Others made of sterner stuff look the formula straight in the face, confronting a hodgepodge of letters and symbols more formidable than anything they've encountered up to that point:
+
+ 
+
+[[./the-joy-of-x-images/00056.jpeg]]
+
+ 
+
+ It's only when you understand what the quadratic formula is trying to do that you can begin to appreciate its inner beauty. In this chapter I hope to give you a feeling for the cleverness packed into that porcupine of symbols, along with a better sense of what the formula means and where it arises.
+
+There are many situations in which we'd like to figure out the value of some unknown number. What dose of radiation therapy should be given to shrink a thyroid tumor? How much money would you have to pay each month to cover a thirty-year mortgage of $200,000 at a fixed annual interest rate of 5 percent? How fast does a rocket have to go to escape the Earth's gravity?
+
+Algebra is the place where we cut our teeth on the simplest problems of this type. The subject was developed by Islamic mathematicians around A.D. 800, building on earlier work by Egyptian, Babylonian, Greek, and Indian scholars. One practical impetus at that time was the challenge of calculating inheritances according to Islamic law.
+
+For example, suppose a widower dies and leaves his entire estate of 10 dirhams to his daughter and two sons. Islamic law requires that both the sons must receive equal shares. Moreover, each son must receive twice as much as the daughter. How many dirhams will each heir receive?
+
+Let's use the letter x to denote the daughter's inheritance. Even though we don't know what x is yet, we can reason about it as if it were an ordinary number. Specifically, we know that each son gets twice as much as the daughter does, so they each receive 2x. Thus, taken together, the amount that the three heirs inherit is x + 2x + 2x, for a total of 5x, and this must equal the total value of the estate, 10 dirhams. Hence 5x = 10 dirhams. Finally, by dividing both sides of the equation by 5, we see that x = 2 dirhams is the daughter's share. And since each of the sons inherits 2x, they both get 4 dirhams.
+
+ Notice that two types of numbers appeared in this problem: known numbers, like 2, 5, and 10, and unknown numbers, like x. Once we managed to derive a relationship between the unknown and the known (as encapsulated in the equation 5x = 10), we were able to chip away at the equation, dividing both sides by 5 to isolate the unknown x. It was a bit like a sculptor working the marble, trying to release the statue from the stone.
+
+A slightly different tactic would have been needed if we had encountered a known number being /subtracted/ from an unknown, as in an equation like x -- 2 = 5. To free x in this case, we would pare away the 2 by adding it to both sides of the equation. This yields an unencumbered x on the left and 5 + 2 = 7 on the right. Thus x = 7, which you may have already realized by common sense.
+
+Although this tactic is now familiar to all students of algebra, they may not realize the entire subject is named after it. In the early part of the ninth century, Muhammad ibn Musa al-Khwarizmi, a mathematician working in Baghdad, wrote a seminal textbook in which he highlighted the usefulness of restoring a quantity being subtracted (like 2, above) by adding it to the other side of an equation. He called this process /al-jabr/ (Arabic for “restoring”), which later morphed into “algebra.” Then, long after his death, he hit the etymological jackpot again. His own name, al-Khwarizmi, lives on today in the word “algorithm.”
+
+In his textbook, before wading into the intricacies of calculating inheritances, al-Khwarizmi considered a more complicated class of equations that embody relationships among /three/ kinds of numbers, not the mere two considered above. Along with known numbers and an unknown (x), these equations also included the square of the unknown (x²). They are now called quadratic equations, from the Latin /quadratus/, for “square.” Ancient scholars in Babylonia, Egypt, Greece, China, and India had already tackled such brainteasers, which often arose in architectural or geometrical problems involving areas or proportions, and had shown how to solve some of them.
+
+ An example discussed by al-Khwarizmi is
+
+
+[[./the-joy-of-x-images/00057.jpeg]]
+
+ 
+
+In his day, however, such problems were posed in words, not symbols. He asked: “What must be the square which, when increased by ten of its own roots, amounts to thirty-nine?” (Here, the term “root” refers to the unknown x.)
+
+This problem is much tougher than the two we considered above. How can we isolate x now? The tricks used earlier are insufficient, because the x² and 10x terms tend to step on each other's toes. Even if you manage to isolate x in one of them, the other remains troublesome. For instance, if we divide both sides of the equation by 10, the 10x simplifies to x, which is what we want, but then the x² becomes x²/10, which brings us no closer to finding x itself. The basic obstacle, in a nutshell, is that we have to do two things at once, and they seem almost incompatible.
+
+The solution that al-Khwarizmi presents is worth delving into in some detail, first because it's so slick, and second because it's so powerful---it allows us to solve /all/ quadratic equations in a single stroke. By that I mean that if the known numbers 10 and 39 above were changed to any other numbers, the method would still work.
+
+ The idea is to interpret each of the terms in the equation geometrically. Think of the first term, x², as the area of a square with dimensions x by x.
+
+
+[[./the-joy-of-x-images/00058.jpeg]]
+
+ 
+
+Similarly, regard the second term, 10x, as the area of a rectangle of dimensions 10 by x or, more ingenious, as the area of two equal rectangles, each measuring 5 by x. (Splitting the rectangle into two pieces sets the stage for the key maneuver that follows, known as completing the square.)
+
+ 
+
+[[./the-joy-of-x-images/00059.jpeg]]
+
+ 
+
+Attach the two new rectangles onto the square to produce a notched shape of area x² + 10x:
+
+[[./the-joy-of-x-images/00060.jpeg]]
+
+Viewed in this light, al-Khwarizmi's puzzle amounts to asking: If the notched shape occupies 39 square units of area, how large would x have to be?
+
+ 
+
+[[./the-joy-of-x-images/00061.jpeg]]
+
+ 
+
+The picture itself suggests an almost irresistible next step. Look at that missing corner. If only it were filled in, the notched shape would turn into a perfect square. So let's take the hint and complete the square.
+
+ 
+
+[[./the-joy-of-x-images/00062.jpeg]]
+
+ 
+
+Supplying the missing 5 × 5 square adds 25 square units to the existing area of x² + 10x, for a total of x² + 10x + 25. Equivalently, that combined area can be expressed more neatly as (x + 5)², since the completed square is x + 5 units long on each side.
+
+The upshot is that x² and 10x are now moving gracefully as a couple, rather than stepping on each other's toes, by being paired within the single expression (x + 5)². That's what will soon enable us to solve for x.
+
+ Meanwhile, because we added 25 units of area to the left side of the equation x² + 10x = 39, we must also add 25 to the right side, to keep the equation balanced. Since 39 + 25 = 64, our equation then becomes
+
+ 
+
+[[./the-joy-of-x-images/00063.jpeg]]
+
+ 
+
+But that's a cinch to solve. Taking square roots of both sides gives x + 5 = 8, so x = 3.
+
+Lo and behold, 3 really does solve the equation x² + 10x = 39. If we square 3 (giving 9) and then add 10 times 3 (giving 30), the sum is 39, as desired.
+
+There's only one snag. If al-Khwarizmi were taking algebra today, he wouldn't receive full credit for this answer. He fails to mention that a negative number, x = --13, also works. Squaring it gives 169; adding it ten times gives --130; and they too add up to 39. But this negative solution was ignored in ancient times, since a square with a side of negative length is geometrically meaningless. Today, algebra is less beholden to geometry and we regard the positive and negative solutions as equally valid.
+
+In the centuries after al-Khwarizmi, scholars came to realize that /all/ quadratic equations could be solved in the same way, by completing the square---as long as one was willing to allow the negative numbers (and their bewildering square roots) that often came up in the answers. This line of argument revealed that the solutions to any quadratic equation
+
+ 
+
+[[./the-joy-of-x-images/00064.jpeg]]
+
+ 
+
+ (where /a/, /b/, and /c/ are known but arbitrary numbers, and x is unknown) could be expressed by the quadratic formula,
+
+ 
+
+[[./the-joy-of-x-images/00065.jpeg]]
+
+ 
+
+What's so remarkable about this formula is how brutally explicit and comprehensive it is. There's the answer, right there, no matter what /a/, /b/, and /c/ happen to be. Considering that there are infinitely many possible choices for each of them, that's a lot for a single formula to manage.
+
+In our own time, the quadratic formula has become an irreplaceable tool for practical applications. Engineers and scientists use it to analyze the tuning of a radio, the swaying of a footbridge or a skyscraper, the arc of a baseball or a cannonball, the ups and downs of animal populations, and countless other real-world phenomena.
+
+For a formula born of the mathematics of inheritance, that's quite a legacy.
+* 11. Power Tools
+
+IF YOU WERE an avid television watcher in the 1980s, you may remember a clever show called /Moonlighting/. Known for its snappy dialogue and the romantic chemistry between its costars, it featured Cybill Shepherd and Bruce Willis as Maddie Hayes and David Addison, a couple of wisecracking private detectives.
+
+ [[./the-joy-of-x-images/00066.jpeg]]
+
+ 
+
+ While investigating one particularly tough case, David asks a coroner's assistant for his best guess about possible suspects. “Beats me,” says the assistant. “But you know what I don't understand?” David replies, “Logarithms?” Then, reacting to Maddie's look: “What? You understood those?”
+
+That pretty well sums up how many people feel about logarithms. Their peculiar name is just part of their image problem. Most folks never use them again after high school, at least not consciously, and are oblivious to the logarithms hiding behind the scenes of their daily lives.
+
+The same is true of many of the other functions discussed in algebra II and precalculus. Power functions, exponential functions---what was the point of all that? My goal in this chapter is to help you appreciate the function of all those functions, even if you never have occasion to press their buttons on your calculator.
+
+A mathematician needs functions for the same reason that a builder needs hammers and drills. Tools transform things. So do functions. In fact, mathematicians often refer to them as transformations because of this. But instead of wood and steel, the materials that functions pound away on are numbers and shapes and, sometimes, even other functions.
+
+To show you what I mean, let's plot the graph of the equation y = 4 -- x². You may remember how this sort of activity goes: You draw a picture of the /xy/ plane with the x-axis running horizontally and the y-axis vertically. Then for each x you compute the corresponding y and plot them together as a single point in the /xy/ plane. For example, when x is 1, the equation says y = 4 -- 1², which is 4 -- 1, or 3. So (x,y) = (1,3) is a point on the graph. After you calculate and plot a few more points, the following picture emerges.
+
+ 
+
+ [[./the-joy-of-x-images/00067.jpeg]]
+
+ 
+
+The bowed shape of the curve is due to the action of mathematical pliers. In the equation for y, the function that transforms x into x² behaves a lot like the common tool for bending and pulling things. When it's applied to every point on a piece of the x-axis (which you could visualize as a straight piece of wire), the pliers bend and elongate that piece into the downward-curving arch shown above.
+
+And what role does the 4 play in the equation y = 4 -- x²? It acts like a nail for hanging a picture on a wall. It lifts up the bent wire arch by 4 units. Since it raises all points by the same amount, it's known as a constant function.
+
+This example illustrates the dual nature of functions. On the one hand, they're tools: the x² bends the piece of the x-axis, and the 4 lifts it. On the other hand, they're building blocks: the 4 and the --x² can be regarded as component parts of a more complicated function, 4 -- x², just as wires, batteries, and transistors are component parts of a radio.
+
+Once you start to look at things this way, you'll notice functions everywhere. The arching curve above---technically known as a parabola---is the signature of the squaring function x² operating behind the scenes. Look for it when you're taking a sip from a water fountain or watching a basketball arc toward the hoop. And if you ever have a few minutes to spare on a layover in Detroit's international airport, be sure to stop by the water feature in the Delta terminal to enjoy the world's most breathtaking parabolas at play.
+
+ 
+
+ [[./the-joy-of-x-images/00068.jpeg]]
+
+ 
+
+Parabolas and constants are associated with a wider class of functions---power functions of the form x^{/n/}, in which a variable x is raised to a fixed power /n/. For a parabola, /n/ = 2; for a constant, /n/ = 0.
+
+Changing the value of /n/ yields other handy tools. For example, raising x to the first power (/n/ = 1) gives a function that works like a ramp, a steady incline of growth or decay. It's called a linear function because its /xy/ graph is a line. If you leave a bucket out in a steady rain, the water collecting at the bottom rises linearly in time.
+
+Another useful tool is the inverse square function, 1/x², corresponding to the case /n/ = --2. (The power becomes --2 because the function is an /inverse/ square; the x² appears in the denominator.) This function is good for describing how waves and forces attenuate as they spread out in three dimensions---for instance, how a sound softens as it moves away from its source.
+
+ Power functions like these are the building blocks that scientists and engineers use to describe growth and decay in their mildest forms.
+
+But when you need mathematical dynamite, it's time to unpack the exponential functions. They describe all sorts of explosive growth, from nuclear chain reactions to the proliferation of bacteria in a petri dish. The most familiar example is the function 10/ˣ/, in which 10 is raised to the power x. Make sure not to confuse this with the earlier power functions. Here the exponent (the power x) is a variable, and the base (the number 10) is a constant---whereas in a power function like x², it's the other way around. This switch makes a huge difference: as x gets larger and larger, an exponential function of x eventually grows faster than /any/ power function, no matter how large the power. Exponential growth is almost unimaginably rapid.
+
+That's why it's so hard to fold a piece of paper in half more than seven or eight times. Each folding approximately doubles the thickness of the wad, causing it to grow exponentially. Meanwhile, the wad's length shrinks in half every time, and thus /decreases/ exponentially fast. For a standard sheet of notebook paper, after seven folds the wad becomes thicker than it is long, so it can't be folded again. It doesn't matter how strong the person doing the folding is. For a sheet to be considered legitimately folded /n/ times, the resulting wad is required to have 2/ⁿ/ layers in a straight line, and this can't happen if the wad is thicker than it is long.
+
+ The challenge was thought to be impossible until Britney Gallivan, then a junior in high school, solved it in 2002. She began by deriving a formula
+
+ 
+
+[[./the-joy-of-x-images/00069.jpeg]]
+
+
+that predicted the maximum number of times, /n/, that paper of a given thickness /T/ and length /L/ could be folded in one direction. Notice the forbidding presence of the exponential function 2/ⁿ/ in two places---once to account for the doubling of the wad's thickness at each fold, and another time to account for the halving of its length.
+
+Using her formula, Britney concluded that she would need to use a special roll of toilet paper nearly three-quarters of a mile long. She bought the paper, and in January 2002, she went to a shopping mall in her hometown of Pomona, California, and unrolled the paper. Seven hours later, and with the help of her parents, she smashed the world record by folding the paper in half twelve times!
+
+In theory, exponential growth is also supposed to grace your bank account. If your money grows at an annual interest rate of /r/, after one year it will be worth (1 + /r/) times your original deposit; after two years, (1 + /r/)²; and after x years, (1 + /r/)/ˣ/ times your initial deposit. Thus the miracle of compounding that we so often hear about is caused by exponential growth in action.
+
+Which brings us back to logarithms. We need them because it's useful to have tools that can undo the actions of other tools. Just as every office worker needs both a stapler and a staple remover, every mathematician needs exponential functions /and/ logarithms. They're inverses. This means that if you type a number x into your calculator and then punch the 10/ˣ/ button followed by the log x button, you'll get back to the number you started with. For example, if x = 2, then 10/ˣ/ would be 10², which equals 100. Taking the log of that then brings the result back to 2; the log button undoes the action of the 10/ˣ/ button. Hence log(100) equals 2. Likewise, log(1,000) = 3 and log(10,000) = 4, because 1,000 = 10^{3} and 10,000 = 10^{4}.
+
+ Notice something magical here: as the numbers inside the logarithms grew /multiplicatively/, increasing tenfold each time from 100 to 1,000 to 10,000, their logarithms grew /additively/, increasing from 2 to 3 to 4. Our brains perform a similar trick when we listen to music. The frequencies of the notes in a scale---do, re, mi, fa, sol, la, ti, do---sound to us like they're rising in equal /steps/. But objectively their vibrational frequencies are rising by equal /multiples/. We perceive pitch logarithmically.
+
+In every place where they arise, from the Richter scale for earthquake magnitudes to pH measures of acidity, logarithms make wonderful compressors. They're ideal for taking quantities that vary over a wide range and squeezing them together so they become more manageable. For instance, 100 and 100 million differ a millionfold, a gulf that most of us find incomprehensible. But their logarithms differ only fourfold (they are 2 and 8, because 100 = 10² and 100 million = 10^{8}). In conversation, we all use a crude version of logarithmic shorthand when we refer to any salary between $100,000 and $999,999 as being six figures. That “six” is roughly the logarithm of these salaries, which in fact span the range from five to six.
+
+As impressive as all these functions may be, a mathematician's toolbox can only do so much---which is why I still haven't assembled my Ikea bookcases.
+
+
+
+
+

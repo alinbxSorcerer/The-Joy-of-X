@@ -1,0 +1,255 @@
+#+TITLE: 5.Data
+
+* 22. The New Normal
+
+
+STATISTICS HAS SUDDENLY become cool and trendy. Thanks to the emergence of the Internet, e-commerce, social networks, the Human Genome Project, and digital culture in general, the world is now teeming with data. Marketers scrutinize our habits and tastes. Intelligence agencies collect data on our whereabouts, e-mails, and phone calls. Sports statisticians crunch the numbers to decide which players to trade, whom to draft, and whether to go for it on fourth down with two yards to go. Everybody wants to connect the dots, to find the needle of meaning in the haystack of data.
+
+So it's not surprising that students are being advised accordingly. “Learn some statistics,” exhorted Greg Mankiw, an economist at Harvard, in a 2010 column in the /New York Times/. “High school mathematics curriculums spend too much time on traditional topics like Euclidean geometry and trigonometry. For a typical person, these are useful intellectual exercises but have little applicability to daily life. Students would be better served by learning more about probability and statistics.” David Brooks put it more bluntly. In a column about what college courses everyone should take to be properly educated, he wrote, “Take statistics. Sorry, but you'll find later in life that it's handy to know what a standard deviation is.”
+
+ Yes, and even handier to know what a distribution is. That's the first idea I'd like to focus on here, because it embodies one of the central lessons of statistics ---things that seem hopelessly random and unpredictable when viewed in isolation often turn out to be lawful and predictable when viewed in aggregate.
+
+You may have seen a demonstration of this principle at a science museum (if not, you can find videos online). The standard exhibit involves a setup called a Galton board, which looks a bit like a pinball machine except it has no flippers and its bumpers consist of a regular array of evenly spaced pegs arranged in rows.
+
+ 
+
+[[./the-joy-of-x-images/00160.jpeg]]
+
+ 
+
+ The demo begins when hundreds of balls are poured into the top of the Galton board. As they rain down, they randomly bounce off the pegs, sometimes to the left, sometimes to the right, and ultimately distribute themselves in the evenly spaced bins at the bottom. The height of the stacked balls in each bin shows how likely it was for a ball to land there. Most balls end up somewhere near the middle, with slightly fewer balls flanking them on either side, and fewer still far off in the tails at either end. Overall, the pattern is utterly predictable: it always forms a bell-shaped distribution---even though it's impossible to predict where any given ball will end up.
+
+How does individual randomness turn into collective regularity? Easy---the odds demand it. The middle bin is likely to be the most populated spot because most balls will make about the same number of leftward and rightward bounces before they reach the bottom. So they'll probably end up somewhere near the middle. The only balls that make it far out to either extreme, way off in the tails of the distribution where the outliers live, are those that just happen to bounce in the same direction almost every time they hit a peg. That's very unlikely. And that's why there are so few balls out there.
+
+Just as the ultimate location of each ball is determined by the sum of many chance events, lots of phenomena in this world are the net result of many tiny flukes, so they too are governed by a bell-shaped curve. Insurance companies bank on this. They know, with great accuracy, how many of their customers will die each year. They just don't know who the unlucky ones will be.
+
+Or consider how tall you are. Your height depends on countless little accidents of genetics, biochemistry, nutrition, and environment. Consequently, it's plausible that when viewed in aggregate, the heights of adult men and women should fall on a bell curve.
+
+ In a blog post titled “The big lies people tell in online dating,” the statistically minded dating service OkCupid recently graphed how tall their members are---or rather, how tall they /say/ they are---and found that the heights reported by both sexes follow bell curves, as expected. What's surprising, however, is that both distributions are shifted about two inches to the right of where they should be.
+
+ 
+
+[[./the-joy-of-x-images/00161.jpeg]]
+
+ 
+
+So either the people who join OkCupid are unusually tall, or they exaggerate their heights by a couple of inches when describing themselves online.
+
+An idealized version of these bell curves is what mathematicians call the normal distribution. It's one of the most important concepts in statistics. Part of its appeal is theoretical. The normal distribution can be proven to arise whenever a large number of mildly random effects of similar size, all acting independently, are added together. And many things are like that.
+
+But not everything. That's the second point I'd like to stress. The normal distribution is not nearly as ubiquitous as it once seemed. For about 100 years now, and especially during the past few decades, statisticians and scientists have noticed that plenty of phenomena deviate from this pattern yet still manage to follow a pattern of their own. Curiously, these types of distributions are barely mentioned in the elementary statistics textbooks, and when they are, they're usually trotted out as pathological specimens. It's outrageous. For, as I'll try to explain, much of modern life makes a lot more sense when you understand these distributions. They're the new normal.
+
+ Take the distribution of city sizes in the United States. Instead of clustering around some intermediate value in a bell-shaped fashion, the vast majority of towns and cities are tiny and therefore huddle together on the left of the graph.
+
+ 
+
+[[./the-joy-of-x-images/00162.jpeg]]
+
+ 
+
+And the larger the population of a city, the more uncommon a city of that size is. So when viewed in the aggregate, the distribution looks more like an L-curve than a bell curve.
+
+There's nothing surprising about this. Everybody knows that big cities are rarer than small ones. What's less obvious, though, is that city sizes nevertheless follow a beautifully simple distribution . . . as long as you look at them through logarithmic lenses.
+
+ In other words, suppose we regard the size differential between a pair of cities to be the same if their populations differ by the same /factor/, rather than by the same absolute number of people (much like two pitches an octave apart always differ by a constant factor of double the frequency). And suppose we do likewise on the vertical axis.
+
+ 
+
+[[./the-joy-of-x-images/00163.jpeg]]
+
+ 
+
+Then the data fall on a curve that's almost a straight line. From the properties of logarithms, we can then deduce that the original L-curve was a power law, a function of the form
+
+ 
+
+[[./the-joy-of-x-images/00164.jpeg]]
+
+ 
+
+where x is a city's size, y is how many cities have that size, /C/ is a constant, and the exponent /a/ (the power in the power law) is the negative of the straight line's slope.
+
+Power-law distributions have counterintuitive properties from the standpoint of conventional statistics. For example, unlike normal distributions', their modes, medians, and means do not agree because of the skewed, asymmetrical shapes of their L-curves. President Bush made use of this property when he stated that his 2003 tax cuts had saved families an average of $1,586 each. Though that is technically correct, he was conveniently referring to the /mean/ rebate, a figure that averaged in the whopping rebates of hundreds of thousands of dollars received by the richest 0.1 percent of the population. The tail on the far right of the income distribution is known to follow a power law, and in situations like this, the mean is a misleading statistic to use because it's far from typical. Most families, in fact, got less than $650 back. The median was a lot less than the mean.
+
+ This example highlights the most crucial feature of power-law distributions. Their tails are heavy (also known as fat or long), at least compared to the puny little wisp of a tail on the normal distribution. So extremely large outliers, though still rare, are much more common for these distributions than they would be for normal bell curves.
+
+On October 19, 1987, now known as Black Monday, the Dow Jones industrial average dropped by 22 percent in a single day. Compared to the usual level of volatility in the stock market, this was a drop of more than twenty standard deviations. Such an event is all but impossible according to traditional bell-curve statistics; its probability is less than one in 100,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000 (that's 10 raised to the 50th power). Yet it happened . . . because fluctuations in stock prices don't follow normal distributions. They're better described by heavy-tailed distributions.
+
+So are earthquakes, wildfires, and floods, which complicates the task of risk management for insurance industries. The same mathematical pattern holds for the numbers of deaths caused by wars and terrorist attacks, and even for more benign things like word frequencies in novels and the number of sexual partners people have.
+
+ Though the adjectives used to describe their prominent tails weren't originally meant to be flattering, such distributions have come to wear them with pride. Fat, heavy, and long? Yeah, that's right. Now who's normal?
+* 23. Chances Are
+  :PROPERTIES:
+  :CUSTOM_ID: calibre_pb_0
+  :CLASS: chaptertitle
+  :END:
+
+HAVE YOU EVER had that anxiety dream where you suddenly realize you have to take the final exam in some course you've never attended? For professors, it works the other way around---you dream you're giving a lecture in a course you know nothing about.
+
+That's what it's like for me whenever I teach probability theory. It was never part of my own education, so having to lecture about it now is scary and fun, in an amusement-park-thrill-house sort of way.
+
+Perhaps the most pulse-quickening topic of all is conditional probability---the probability that some event A happens, given (or conditional upon) the occurrence of some other event B. It's a slippery concept, easily conflated with the probability of B given A. They're not the same, but you have to concentrate to see why. For example, consider the following word problem.
+
+Before going on vacation for a week, you ask your spacy friend to water your ailing plant. Without water, the plant has a 90 percent chance of dying. Even with proper watering, it has a 20 percent chance of dying. And the probability that your friend will forget to water it is 30 percent. (a) What's the chance that your plant will survive the week? (b) If it's dead when you return, what's the chance that your friend forgot to water it? (c) If your friend forgot to water it, what's the chance it'll be dead when you return? Although they sound alike, (b) and (c) are not the same. In fact, the problem tells us that the answer to (c) is 90 percent. But how do you combine all the probabilities to get the answer to (b)? Or (a)?
+
+ Naturally, the first few semesters I taught this topic, I stuck to the book, inching along, playing it safe. But gradually I began to notice something. A few of my students would avoid using Bayes's theorem, the labyrinthine formula I was teaching them. Instead they would solve the problems by an equivalent method that seemed easier.
+
+What these resourceful students kept discovering, year after year, was a better way to think about conditional probability. Their way comports with human intuition instead of confounding it. The trick is to think in terms of natural frequencies---simple counts of events---rather than in more abstract notions of percentages, odds, or probabilities. As soon as you make this mental shift, the fog lifts.
+
+This is the central lesson of /Calculated Risks/, a fascinating book by Gerd Gigerenzer, a cognitive psychologist at the Max Planck Institute for Human Development in Berlin. In a series of studies about medical and legal issues ranging from AIDS counseling to the interpretation of DNA fingerprinting, Gigerenzer explores how people miscalculate risk and uncertainty. But rather than scold or bemoan human frailty, he tells us how to do better---how to avoid clouded thinking by recasting conditional-probability problems in terms of natural frequencies, much as my students did.
+
+In one study, Gigerenzer and his colleagues asked doctors in Germany and the United States to estimate the probability that a woman who has a positive mammogram actually has breast cancer even though she's in a low-risk group: forty to fifty years old, with no symptoms or family history of breast cancer. To make the question specific, the doctors were told to assume the following statistics---couched in terms of percentages and probabilities---about the prevalence of breast cancer among women in this cohort and about the mammogram's sensitivity and rate of false positives:
+
+ 
+
+#+BEGIN_QUOTE
+   The probability that one of these women has breast cancer is 0.8 percent. If a woman has breast cancer, the probability is 90 percent that she will have a positive mammogram. If a woman does not have breast cancer, the probability is 7 percent that she will still have a positive mammogram. Imagine a woman who has a positive mammogram. What is the probability that she actually has breast cancer?
+#+END_QUOTE
+
+ 
+
+Gigerenzer describes the reaction of the first doctor he tested, a department chief at a university teaching hospital with more than thirty years of professional experience:
+
+ 
+
+#+BEGIN_QUOTE
+  [He] was visibly nervous while trying to figure out what he would tell the woman. After mulling the numbers over, he finally estimated the woman's probability of having breast cancer, given that she has a positive mammogram, to be 90 percent. Nervously, he added, “Oh, what nonsense. I can't do this. You should test my daughter; she is studying medicine.” He knew that his estimate was wrong, but he did not know how to reason better. Despite the fact that he had spent 10 minutes wringing his mind for an answer, he could not figure out how to draw a sound inference from the probabilities.
+#+END_QUOTE
+
+ 
+
+ Gigerenzer asked twenty-four other German doctors the same question, and their estimates whipsawed from 1 percent to 90 percent. Eight of them thought the chances were 10 percent or less; eight others said 90 percent; and the remaining eight guessed somewhere between 50 and 80 percent. Imagine how upsetting it would be as a patient to hear such divergent opinions.
+
+As for the American doctors, ninety-five out of a hundred estimated the woman's probability of having breast cancer to be somewhere around 75 percent.
+
+The right answer is 9 percent.
+
+How can it be so low? Gigerenzer's point is that the analysis becomes almost transparent if we translate the original information from percentages and probabilities into natural frequencies:
+
+ 
+
+#+BEGIN_QUOTE
+  Eight out of every 1,000 women have breast cancer. Of these 8 women with breast cancer, 7 will have a positive mammogram. Of the remaining 992 women who don't have breast cancer, some 70 will still have a positive mammogram. Imagine a sample of women who have positive mammograms in screening. How many of these women actually have breast cancer?
+#+END_QUOTE
+
+ 
+
+Since a total of 7 + 70 = 77 women have positive mammograms, and only 7 of them truly have breast cancer, the probability of a woman's having breast cancer given a positive mammogram is 7 out of 77, which is 1 in 11, or about 9 percent.
+
+Notice two simplifications in the calculation above. First, we rounded off decimals to whole numbers. That happened in a few places, like when we said, “Of these 8 women with breast cancer, 7 will have a positive mammogram.” Really we should have said 90 percent of 8 women, or 7.2 women, will have a positive mammogram. So we sacrificed a little precision for a lot of clarity.
+
+ Second, we assumed that everything happens exactly as frequently as its probability suggests. For instance, since the probability of breast cancer is 0.8 percent, exactly 8 women out of 1,000 in our hypothetical sample were assumed to have it. In reality, this wouldn't necessarily be true. Events don't have to follow their probabilities; a coin flipped 1,000 times doesn't always come up heads 500 times. But pretending that it does gives the right answer in problems like this.
+
+Admittedly the logic is a little shaky---that's why the textbooks look down their noses at this approach, compared to the more rigorous but hard-to-use Bayes's theorem---but the gains in clarity are justification enough. When Gigerenzer tested another set of twenty-four doctors, this time using natural frequencies, nearly all of them got the correct answer, or close to it.
+
+Although reformulating the data in terms of natural frequencies is a huge help, conditional-probability problems can still be perplexing for other reasons. It's easy to ask the wrong question or to calculate a probability that's correct but misleading.
+
+Both the prosecution and the defense were guilty of this in the O.J. Simpson trial of 1994--95. Each of them asked the court to consider the wrong conditional probability.
+
+The prosecution spent the first ten days of the trial introducing evidence that O.J. had a history of violence toward his ex-wife Nicole Brown. He had allegedly battered her, thrown her against walls, and groped her in public, telling onlookers, “This belongs to me.” But what did any of this have to do with a murder trial? The prosecution's argument was that a pattern of spousal abuse reflected a motive to kill. As one of the prosecutors put it, “A slap is a prelude to homicide.”
+
+ Alan Dershowitz countered for the defense, arguing that even if the allegations of domestic violence were true, they were irrelevant and should therefore be inadmissible. He later wrote, “We knew we could prove, if we had to, that an infinitesimal percentage---certainly fewer than 1 of 2,500---of men who slap or beat their domestic partners go on to murder them.”
+
+In effect, both sides were asking the court to consider the probability that a man murdered his ex-wife, given that he previously battered her. But as the statistician I. J. Good pointed out, that's not the right number to look at.
+
+The real question is: What's the probability that a man murdered his ex-wife, given that he previously battered her /and she was murdered by someone/? That conditional probability turns out to be very far from 1 in 2,500.
+
+To see why, imagine a sample of 100,000 battered women. Granting Dershowitz's number of 1 in 2,500, we expect about 40 of these women to be murdered by their abusers in a given year (since 100,000 divided by 2,500 equals 40). We also expect 3 more of these women, on average, to be killed by someone else (this estimate is based on statistics reported by the FBI for women murdered in 1992; see the notes for further details). So out of the 43 murder victims altogether, 40 of them were killed by their batterers. In other words, the batterer was the murderer about 93 percent of the time.
+
+Don't confuse this number with the probability that O.J. did it. That probability would depend on a lot of other evidence, pro and con, such as the defense's claim that the police framed O.J., and the prosecution's claim that the killer and O.J. shared the same style of shoes, gloves, and DNA.
+
+ The probability that any of this changed your mind about the verdict? Zero.
+* 24. Untangling the Web
+  :PROPERTIES:
+  :CUSTOM_ID: calibre_pb_0
+  :CLASS: chaptertitle
+  :END:
+
+IN A TIME long ago, in the dark days before Google, searching the Web was an exercise in frustration. The sites suggested by the older search engines were too often irrelevant, while the ones you really wanted were either buried way down in the list of results or missing altogether.
+
+Algorithms based on link analysis solved the problem with an insight as paradoxical as a Zen koan: A Web search should return the best pages. And what, grasshopper, makes a page good? A page is good if other good pages link to it.
+
+That sounds like circular reasoning. It is . . . which is why it's so deep. By grappling with this circle and turning it to advantage, link analysis yields a jujitsu solution to searching the Web.
+
+The approach builds on ideas from linear algebra, the study of vectors and matrices. Whether you want to detect patterns in large data sets or perform gigantic computations involving millions of variables, linear algebra has the tools you need. Along with underpinning Google's PageRank algorithm, it has helped scientists classify human faces, analyze the voting patterns of Supreme Court justices, and win the million-dollar Netflix Prize (awarded to the person or team who could improve by more than 10 percent Netflix's system for recommending movies to its customers).
+
+ For a case study of linear algebra in action, let's look at how PageRank works. And to bring out its essence with a minimum of fuss, let's imagine a toy Web that has just three pages, all connected like this:
+
+ 
+
+[[./the-joy-of-x-images/00165.jpeg]]
+
+ 
+
+The arrows indicate that page X contains a link to page Y, but Y does not return the favor. Instead, Y links to Z. Meanwhile X and Z link to each other in a frenzy of digital back-scratching.
+
+In this little Web, which page is the most important, and which is the least? You might think there's not enough information to say because nothing is known about the pages' content. But that's old-school thinking. Worrying about content turned out to be an impractical way to rank webpages. Computers weren't good at it, and human judges couldn't keep up with the deluge of thousands of pages added each day.
+
+The approach taken by Larry Page and Sergey Brin, the grad students who cofounded Google, was to let webpages rank themselves by voting with their feet---or, rather, with their links. In the example above, pages X and Y both link to Z, which makes Z the only page with two incoming links. So it's the most popular page in the universe. That should count for something. However, if those links come from pages of dubious quality, that should count against them. Popularity means nothing on its own. What matters is having links from /good/ pages.
+
+ Which brings us back to the riddle of the circle: A page is good if good pages link to it, but who decides which pages are good in the first place?
+
+The network does. And here's how. (Actually, I'm skipping some details; see the notes on [[file:part0041.html#p292][[>]]] for a more complete story.)
+
+Google's algorithm assigns a fractional score between 0 and 1 to each page. That score is called its PageRank; it measures how important that page is relative to the others by computing the proportion of time that a hypothetical Web surfer would spend there. Whenever there is more than one outgoing link to choose from, the surfer selects one at random, with equal probability. Under this interpretation, pages are regarded as more important if they're visited more frequently (by this idealized surfer, not by actual Web traffic).
+
+And because the PageRanks are defined as proportions, they have to add up to 1 when summed over the whole network. This conservation law suggests another, perhaps more palpable, way to visualize PageRank. Picture it as a fluid, a watery substance that flows through the network, draining away from bad pages and pooling at good ones. The algorithm seeks to determine how this fluid distributes itself across the network in the long run.
+
+The answer emerges from a clever iterative process. The algorithm starts with a guess, then updates all the PageRanks by apportioning the fluid in equal shares to the outgoing links, and it keeps doing that in a series of rounds until everything settles down and all the pages get their rightful shares.
+
+ Initially the algorithm takes an egalitarian stance. It gives every page an equal portion of PageRank. Since there are three pages in the example we're considering, each page begins with a score of 1/3.
+
+ 
+
+[[./the-joy-of-x-images/00166.jpeg]]
+
+ 
+
+Next, these scores are updated to better reflect each page's true importance. The rule is that each page takes its PageRank from the last round and parcels it out equally to all the pages it links to. Thus, after one round, the updated value of X would still equal 1/3, because that's how much PageRank it receives from Z, the only page that links to it. But Y's score drops to a measly 1/6, since it gets only half of X's PageRank from the previous round. The other half goes to Z, which makes Z the big winner at this stage, since along with the 1/6 it receives from X, it also gets the full 1/3 from Y, for a total of 1/2. So after one round, the PageRank values are those shown below:
+
+ 
+
+ [[./the-joy-of-x-images/00167.jpeg]]
+
+ 
+
+In the rounds to come, the update rule stays the same. If we write (x, y, /z/) for the current scores of pages X, Y, and Z, then the updated scores will be
+
+ 
+
+[[./the-joy-of-x-images/00168.jpeg]]
+
+ 
+
+where the prime symbol in the superscript signifies that an update has occurred. This kind of iterative calculation is easy to do in a spreadsheet (or even by hand, for a network as small as the one we're studying).
+
+ After ten iterations, one finds that the numbers don't change much from one round to the next. By then, X has a 40.6 percent share of the total PageRank, Y has 19.8 percent, and Z has 39.6 percent. Those numbers look suspiciously close to 40 percent, 20 percent, and 40 percent, suggesting that the algorithm is converging to those values.
+
+In fact, that's correct. Those limiting values are what Google's algorithm would define as /the/ PageRanks for the network.
+
+ 
+
+[[./the-joy-of-x-images/00169.jpeg]]
+
+ 
+
+The implication is that X and Z are equally important pages, even though Z has twice as many links coming in. That makes sense: X is just as important as Z because it gets the full endorsement of Z but reciprocates with only half its own endorsement. The other half it sends to Y. This also explains why Y fares only half as well as X and Z.
+
+Remarkably, these scores can be obtained directly, without going through the iteration. Just think about the conditions that define the steady state. If nothing changes after an update is performed, we must have x′ = x, y′ = y, and /z/′ = /z/. So replace the primed variables in the update equations with their unprimed counterparts. Then we get
+
+ 
+
+ [[./the-joy-of-x-images/00170.jpeg]]
+
+ 
+
+and this system of equations can be solved simultaneously to obtain x = 2y = /z/. Finally, since these scores must sum to 1, we conclude x = 2/5, y = 1/5, and /z/ = 2/5, in agreement with the percentages found above.
+
+Let's step back for a moment to look at how all this fits into the larger context of linear algebra. The steady-state equations above, as well as the earlier update equations with the primes in them, are typical examples of linear equations. They're called linear because they're related to lines. The variables x, y, /z/ in them appear to the first power only, just as they do in the familiar equation for a straight line, y = /mx/ + /b/, a staple of high-school algebra courses.
+
+Linear equations, as opposed to those containing nonlinear terms like x² or /yz/ or sin x, are comparatively easy to solve. The challenge comes when there are enormous numbers of variables involved, as there are in the real Web. One of the central tasks of linear algebra, therefore, is the development of faster and faster algorithms for solving such huge sets of equations. Even slight improvements have ramifications for everything from airline scheduling to image compression.
+
+But the greatest triumph of linear algebra, from the standpoint of real-world impact, is surely its solution to the Zen riddle of ranking webpages. “A page is good insofar as good pages link to it.” Translated into symbols, that criterion becomes the PageRank equations.
+
+ Google got where it is today by solving the same equations as we did here---just with a few billion more variables . . . and profits to
+

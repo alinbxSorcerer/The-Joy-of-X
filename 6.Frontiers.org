@@ -1,0 +1,694 @@
+#+TITLE: Six.Frontiers
+
+* 25. The Loneliest Numbers
+
+ACCORDING TO A memorable song from the 1960s, one is the loneliest number, and two can be as bad as one. Maybe so, but the prime numbers have it pretty rough too.
+
+Paolo Giordano explains why in his best-selling novel /The Solitude of Prime Numbers/. It's the melancholy love story of two misfits, two primes, named Mattia and Alice, both scarred by childhood tragedies that left them virtually incapable of connecting with other people, yet who sense in each other a kindred damaged spirit. Giordano writes,
+
+#+BEGIN_QUOTE
+  Prime numbers are divisible only by 1 and by themselves. They hold their place in the infinite series of natural numbers, squashed, like all numbers, between two others, but one step further than the rest. They are suspicious, solitary numbers, which is why Mattia thought they were wonderful. Sometimes he thought that they had ended up in that sequence by mistake, that they'd been trapped, like pearls strung on a necklace. Other times he suspected that they too would have preferred to be like all the others, just ordinary numbers, but for some reason they couldn't do it. [. . .]
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+   In his first year at university, Mattia had learned that, among prime numbers, there are some that are even more special. Mathematicians call them twin primes: pairs of prime numbers that are close to each other, almost neighbors, but between them there is always an even number that prevents them from truly touching. Numbers like 11 and 13, like 17 and 19, 41 and 43. If you have the patience to go on counting, you discover that these pairs gradually become rarer. You encounter increasingly isolated primes, lost in that silent, measured space made only of ciphers, and you develop a distressing presentiment that the pairs encountered up until that point were accidental, that solitude is the true destiny. Then, just when you're about to surrender, when you no longer have the desire to go on counting, you come across another pair of twins, clutching each other tightly. There is a common conviction among mathematicians that however far you go, there will always be another two, even if no one can say where exactly, until they are discovered.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+  Mattia thought that he and Alice were like that, twin primes, alone and lost, close but not close enough to really touch each other.
+#+END_QUOTE
+
+ 
+
+Here I'd like to explore some of the beautiful ideas in the passage above, particularly as they relate to the solitude of prime numbers and twin primes. These issues are central to number theory, the subject that concerns itself with the study of whole numbers and their properties and that is often described as the purest part of mathematics.
+
+Before we ascend to where the air is thin, let me dispense with a question that often occurs to practical-minded people: Is number theory good for anything? Yes. Almost in spite of itself, number theory provides the basis for the encryption algorithms used millions of times each day to secure credit card transactions over the Internet and to encode military-strength secret communications. Those algorithms rely on the difficulty of decomposing an enormous number into its prime factors.
+
+But that's not why mathematicians are obsessed with prime numbers. The real reason is that they're fundamental. They're the atoms of arithmetic. Just as the Greek origin of the word “atom” suggests, the primes are “a-tomic,” meaning “uncuttable, indivisible.” And just as everything is composed of atoms, every number is composed of primes. For example, 60 equals 2 × 2 × 3 × 5. We say that 60 is a composite number with prime factors of 2 (counted twice), 3, and 5.
+
+And what about 1? Is it prime? No, it isn't, and when you understand why it isn't, you'll begin to appreciate why 1 truly is the loneliest number---even lonelier than the primes.
+
+It doesn't deserve to be left out. Given that 1 is divisible only by 1 and itself, it really should be considered prime, and for many years it was. But modern mathematicians have decided to exclude it, solely for convenience. If 1 were allowed in, it would mess up a theorem that we'd like to be true. In other words, we've rigged the definition of prime numbers to give us the theorem we want.
+
+The desired theorem says that any number can be factored into primes in a /unique/ way. But if 1 were considered prime, the uniqueness of prime factorization would fail. For example, 6 would equal 2 × 3, but it would also equal 1 × 2 × 3 and 1 × 1 × 2 × 3 and so on, and these would all have to be accepted as different prime factorizations. Silly, of course, but that's what we'd be stuck with if 1 were allowed in.
+
+ This sordid little tale is instructive; it pulls back the curtain on how math is done sometimes. The naive view is that we make our definitions, set them in stone, then deduce whatever theorems happen to follow from them. Not so. That would be much too passive. We're in charge and can alter the definitions as we please---especially if a slight tweak leads to a tidier theorem, as it does here.
+
+Now that 1 has been thrown under the bus, let's look at everyone else, the full-fledged prime numbers. The main thing to know about them is how mysterious they are, how alien and inscrutable. No one has ever found an exact formula for the primes. Unlike real atoms, they don't follow any simple pattern, nothing akin to the periodic table of the elements.
+
+You can already see the warning signs in the first ten primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Right off the bat, things start badly with 2. It's a freak, a misfit among misfits---the only prime with the embarrassment of being an even number. No wonder “it's the loneliest number since the number one” (as the song says).
+
+Apart from 2, the rest of the primes are all odd . . . but still quirky. Look at the gaps between them. Sometimes they're two spaces apart (like 5 and 7), sometimes four (13 and 17), and sometimes six (23 and 29).
+
+To further underscore how disorderly the primes are, compare them to their straight-arrow cousins the odd numbers: 1, 3, 5, 7, 9, 11, 13, . . . The gaps between odd numbers are always consistent: two spaces, steady as a drumbeat. So they obey a simple formula: the /n/th odd number is 2/n/ -- 1. The primes, by contrast, march to their own drummer, to a rhythm no one else can perceive.
+
+ Given the irregularities in the spacing of the primes, numbers theorists have resorted to looking at them statistically, as members of an ensemble, rather than dwelling on their idiosyncrasies. Specifically, let's ask how they're distributed among the ordinary whole numbers. How many primes are less than or equal to 10? Or 100? Or an arbitrary number /N/? This construction is a direct parallel to the statistical concept of a cumulative distribution.
+
+So imagine counting the prime numbers by walking among them, like an anthropologist taking a census. Picture them standing there on the x-axis. You start at the number 1 and begin walking to the right, tallying primes as you go. Your running total looks like this:
+
+ 
+
+[[./the-joy-of-x-images/00171.jpeg]]
+
+ 
+
+The values on the y-axis show how many primes you've counted by the time you reach a given location, x. For all x's less than 2, the graph of y remains flat at 0, since no primes have been counted yet. The first prime appears at x = 2. So the graph jumps up there. (Got one!) Then it remains flat until x = 3, after which it jumps up another step. The alternating jumps and plateaus form a strange, irregular staircase. Mathematicians call it the counting function for the primes.
+
+ Contrast this image with its counterpart for the odd numbers.
+
+ 
+
+[[./the-joy-of-x-images/00172.jpeg]]
+
+ 
+
+Now the staircase becomes perfectly regular, following a trend line whose slope is 1/2. That's because the gap between neighboring odd numbers is always 2.
+
+Is there any hope of finding something similar for the prime numbers despite their erratic character? Miraculously, yes. The key is to focus on the trend, not the details of the stair steps. If we zoom out, a curve begins to emerge from the clutter. Here's the graph of the counting function for all primes up to 100.
+
+ 
+
+[[./the-joy-of-x-images/00173.jpeg]]
+
+ 
+
+The steps are less distracting now. The curve looks even smoother if we count all the primes out to a billion:
+
+ 
+
+[[./the-joy-of-x-images/00174.jpeg]]
+
+ 
+
+ First impressions to the contrary, this curve is /not/ actually a straight line. It droops down slightly as it climbs. Its droopiness means that the primes are becoming /rarer/. More isolated. More alone. That's what Giordano meant by the “solitude of prime numbers.”
+
+This thinning out becomes obvious if we look at the census data from another angle. Remember we tallied ten primes in the first thirty whole numbers. So near the beginning of the number line, about one out of every three numbers is prime, making them a robust 33 percent of the population. But among the first hundred numbers, only twenty-five are prime. Their ranks have dwindled to one in four, a worrisome 25 percent. And among the first billion numbers, a mere 5 percent are prime.
+
+That's the bleak message of the droopy curve. The primes are a dying breed. They never die out completely---we've known since Euclid they go on forever---but they fade into near oblivion.
+
+By finding functions that approximate the droopy curve, number theorists have quantified how desolate the prime numbers truly are, as expressed by a formula for the typical spacing between them. If /N/ is a large number, the average gap between the primes near /N/ is approximately equal to ln/N/, the natural logarithm of /N/. (The natural logarithm behaves like the ordinary logarithm encountered in high school, except it's based on the number /e/ instead of 10. It's natural in the sense that it pops up everywhere in advanced math, thanks to being part of /e/'s entourage. For more on the ubiquity of /e/, see chapter 19.)
+
+Although the ln/N/ formula for the average spacing between primes doesn't work too well when /N/ is small, it improves in the sense that its percentage error goes to zero as /N/ approaches infinity. To get a feel for the numbers involved, suppose /N/ = 1,000. It turns out there are 168 prime numbers less than 1,000, so the average gap between them in this part of the number line is 1,000/68, or about 5.9. For comparison, the formula predicts an average gap of ln(1,000) ≈ 6.9, which is too high by about 17 percent. But when we go much farther out, say to /N/ = 1,000,000,000, the actual and predicted gaps become 19.7 and 20.7, respectively, an overestimate of only about 5 percent.
+
+ The validity of the ln/N/ formula as /N/ tends to infinity is now known as the prime number theorem. It was first noticed (but not published) by Carl Friedrich Gauss in 1792 when he was fifteen years old. (See what a kid can do when not distracted by an Xbox?)
+
+As for this chapter's other teens, Mattia and Alice, I hope you can appreciate how poignant it is that twin primes apparently continue to exist in the farthest reaches of the number line, “in that silent, measured space made only of ciphers.” The odds are stacked against them. According to the prime number theorem, any particular prime near /N/ has no right to expect a potential mate much closer than ln/N/ away, a gulf much larger than 2 when /N/ is large.
+
+And yet some couples do beat the odds. Computers have found twin primes at unbelievably remote parts of the number line. The largest known pair consists of two numbers with 100,355 decimal digits each, snuggling in the darkness.
+
+The twin prime conjecture says couples like this will turn up forever.
+
+But as for finding another prime couple nearby for a friendly game of doubles? Good luck.
+
+* 26. Group Think
+
+MY WIFE AND I have different sleeping styles---and our mattress shows it. She hoards the pillows, thrashes around all night long, and barely dents the mattress, while I lie on my back, mummy-like, molding a cavernous depression into my side of the bed.
+
+Bed manufacturers recommend flipping your mattress periodically, probably with people like me in mind. But what's the best system? How exactly are you supposed to flip it to get the most even wear out of it?
+
+Brian Hayes explores this problem in the title essay of his book /Group Theory in the Bedroom/. Double-entendres aside, the “group” under discussion here is a collection of mathematical actions---all the possible ways you could flip or rotate the mattress so that it still fits neatly on the bed frame.
+
+ 
+
+[[./the-joy-of-x-images/00175.jpeg]]
+
+ 
+
+ By looking into mattress math in some detail, I hope to give you a feeling for group theory more generally. It's one of the most versatile parts of mathematics. It underlies everything from the choreography of square dancing and the fundamental laws of particle physics to the mosaics of the Alhambra and their chaotic counterparts, like this image:
+
+ 
+
+[[./the-joy-of-x-images/00176.jpeg]]
+
+ 
+
+As these examples suggest, group theory bridges the arts and sciences. It addresses something the two cultures share---an abiding fascination with symmetry. Yet because it encompasses such a wide range of phenomena, group theory is necessarily abstract. It distills symmetry to its essence.
+
+Normally we think of symmetry as a property of a shape. But group theorists focus more on what you can /do/ to a shape---specifically, all the ways you can change it while keeping something else about it the same. More precisely, they look for all the transformations that leave a shape unchanged, given certain constraints. These transformations are called the symmetries of the shape. Taken together, they form a group, a collection of transformations whose relationships define the shape's most basic architecture.
+
+ In the case of a mattress, the transformations alter its orientation in space (that's what changes) while maintaining its rigidity (that's the constraint). And after the transformation is complete, the mattress has to fit snugly on the rectangular bed frame (that's what stays the same). With these rules in place, let's see what transformations qualify for membership in this exclusive little group. It turns out there are only four of them.
+
+The first is the do-nothing transformation, a lazy but popular choice that leaves the mattress untouched. It certainly satisfies all the rules, but it's not much help in prolonging the life of your mattress. Still, it's very important to include in the group. It plays the same role for group theory that 0 does for addition of numbers, or that 1 does for multiplication. Mathematicians call it the identity element, so I'll denote it by the symbol /I/.
+
+Next come the three genuine ways to flip a mattress. To distinguish among them, it helps to label the corners of the mattress by numbering them like so:
+
+ 
+
+[[./the-joy-of-x-images/00177.jpeg]]
+
+ 
+
+The first kind of flip is depicted near the beginning of this chapter. The handsome gentleman in striped pajamas is trying to turn the mattress from side to side by rotating it 180 degrees around its long axis, in a move I'll call /H/, for “horizontal flip.”
+
+ 
+
+ [[./the-joy-of-x-images/00178.jpeg]]
+
+ 
+
+A more reckless way to turn over the mattress is a vertical flip, /V/. This maneuver swaps its head and foot. You stand the mattress upright the long way, so that it almost reaches the ceiling, and then topple it end over end. The net effect, besides the enormous thud, is that the mattress rotates 180 degrees about its lateral axis, shown below.
+
+ 
+
+[[./the-joy-of-x-images/00179.jpeg]]
+
+ 
+
+The final possibility is to spin the mattress half a turn while keeping it flat on the bed.
+
+ 
+
+[[./the-joy-of-x-images/00180.jpeg]]
+
+ 
+
+ Unlike the /H/ and /V/ flips, this rotation, /R/, keeps the top surface on top.
+
+That difference shows up when we look at the mattress---now imagined to be translucent---from above and inspect the numbers at the corners after each of the possible transformations. The horizontal flip turns the numerals into their mirror images. It also permutes them so that 1 and 2 trade places, as do 3 and 4.
+
+ 
+
+[[./the-joy-of-x-images/00181.jpeg]]
+
+ 
+
+The vertical flip permutes the numbers in a different way and stands them on their heads, in addition to mirroring them.
+
+ 
+
+[[./the-joy-of-x-images/00182.jpeg]]
+
+ 
+
+The rotation, however, doesn't generate any mirror images. It merely turns the numbers upside down, this time exchanging 1 for 4 and 2 for 3.
+
+ 
+
+[[./the-joy-of-x-images/00183.jpeg]]
+
+ 
+
+ These details are not the main point. What matters is how the transformations relate to one another. Their patterns of interaction encode the symmetry of the mattress.
+
+To reveal those patterns with a minimum of effort, it helps to draw the following diagram. (Images like this abound in a terrific book called /Visual Group Theory/, by Nathan Carter. It's one of the best introductions to group theory---or to any branch of higher math---I've ever read.)
+
+ 
+
+[[./the-joy-of-x-images/00184.jpeg]]
+
+ 
+
+The four possible states of the mattress are shown at the corners of the diagram. The upper left state is the starting point. The arrows indicate the moves that take the mattress from one state to another.
+
+For example, the arrow pointing from the upper left to the lower right depicts the action of the rotation /R/. The arrow also has an arrowhead on the other end, because if you do /R/ twice, it's tantamount to doing nothing.
+
+That shouldn't come as a surprise. It just means that turning the mattress head to foot and then doing that again returns the mattress to its original state. We can summarize this property with the equation /RR = I/, where /RR/ means “do /R/ twice,” and /I/ is the do-nothing identity element. The horizontal and vertical flip transformations also undo themselves: /HH = I/ and /VV = I/.
+
+ The diagram embodies a wealth of other information. For instance, it shows that the death-defying vertical flip, /V/, is equivalent to /HR/, a horizontal flip followed by a rotation---a much safer path to the same result. To check this, begin at the starting state in the upper left. Head due east along /H/ to the next state, and from there go diagonally southwest along /R/. Because you arrive at the same state you'd reach if you followed /V/ to begin with, the diagram demonstrates that /HR = V/.
+
+Notice, too, that the order of those actions is irrelevant: /HR = RH/, since both roads lead to /V/. This indifference to order is true for any other pair of actions. You should think of this as a generalization of the commutative law for addition of ordinary numbers, x and y, according to which /x + y = y + x/. But beware: The mattress group is special. Many other groups violate the commutative law. Those fortunate enough to obey it are particularly clean and simple.
+
+Now for the payoff. The diagram shows how to get the most even wear out of a mattress. Any strategy that samples all four states periodically will work. For example, alternating /R/ and /H/ is convenient---and since it bypasses /V/, it's not too strenuous. To help you remember it, some manufacturers suggest the mnemonic “spin in the spring, flip in the fall.”
+
+The mattress group also pops up in some unexpected places, from the symmetry of water molecules to the logic of a pair of electrical switches. That's one of the charms of group theory. It exposes the hidden unity of things that would otherwise seem unrelated . . . like in this anecdote about how the physicist Richard Feynman got a draft deferment.
+
+ The army psychiatrist questioning him asked Feynman to put out his hands so he could examine them. Feynman stuck them out, one palm up, the other down. “No, the other way,” said the psychiatrist. So Feynman reversed /both/ hands, leaving one palm down and the other up.
+
+Feynman wasn't merely playing mind games; he was indulging in a little group-theoretic humor. If we consider all the possible ways he could have held out his hands, along with the various transitions among them, the arrows form the same pattern as the mattress group!
+
+ 
+
+[[./the-joy-of-x-images/00185.jpeg]]
+
+ 
+
+But if all this makes mattresses seem way too complicated, maybe the real lesson here is one you already knew---if something's bothering you, just sleep on it.
+
+* 27. Twist and Shout
+
+OUR LOCAL ELEMENTARY school invites parents to come and talk to their children's classes. This gives the kids a chance to hear about different jobs and to learn about things they might not be exposed to otherwise.
+
+When my turn came, I showed up at my daughter's first-grade class with a bag full of Möbius strips. The night before, my wife and I had cut long strips of paper and then given each strip a half twist, like this,
+
+ 
+
+[[./the-joy-of-x-images/00186.jpeg]]
+
+ 
+
+before taping the two ends together to make a Möbius strip:
+
+ 
+
+[[./the-joy-of-x-images/00187.jpeg]]
+
+ 
+
+ There are fun activities that a six-year-old can do with these shapes that involve nothing more than scissors, crayons, tape, and a little curiosity.
+
+As my wife and I passed out the Möbius strips and art supplies, the teacher asked the class what subject they thought we were doing now. One boy raised his hand and said, “Well, I'm not sure, but I know it's not linguistics.”
+
+Of course, the teacher had been expecting an answer of “art,” or maybe, more precociously, “math.” The best answer, however, would have been “topology.” (In Ithaca it's altogether possible that a first-grader could have come up with that. But the topologist's kid happened to be in another class that year.)
+
+So what is topology? It's a vibrant branch of modern math, an offshoot of geometry, but much more loosey-goosey. In topology, two shapes are regarded as the same if you can bend, twist, stretch, or otherwise deform one into the other continuously---that is, without any ripping or puncturing. Unlike the rigid objects of geometry, the objects of topology behave as if they were infinitely elastic, as if they were made of an ideal kind of rubber or Silly Putty.
+
+Topology shines a spotlight on a shape's deepest properties---the properties that remain unchanged after a continuous distortion. For example, a rubber band shaped like a square and another shaped like a circle are topologically indistinguishable. It doesn't matter that a square has four corners and four straight sides. Those properties are irrelevant. A continuous deformation can get rid of them by rounding off the square's corners and bending its sides into circular arcs.
+
+ 
+
+ [[./the-joy-of-x-images/00188.jpeg]]
+
+ 
+
+But the one thing such a deformation /can't/ get rid of is the intrinsic loopiness of a circle and a square. They're both closed curves. That's their shared topological essence.
+
+Likewise, the essence of a Möbius strip is the peculiar half twist locked into it. That twist endows the shape with its signature features. Most famously, a Möbius strip has only one side and only one edge. In other words, its front and back surfaces are actually the same, and so are its top and bottom edges. (To check this, just run your finger along the middle of the strip or its edge until you return to your starting point.) What happened here is that the half twist hooked the former top and bottom edges of the paper into one big, long continuous curve. Similarly, it fused the front to the back. Once the strip has been taped shut, these features are permanent. You can stretch and twist a Möbius strip all you want, but nothing can change its half-twistedness, its one-sidedness, and its one-edgedness.
+
+By having the first-graders examine the strange properties of Möbius strips that follow from these features, I was hoping to show them how much fun math could be---and also how amazing.
+
+First I asked them each to take a crayon and carefully draw a line all the way around the Möbius strip, right down the middle of the surface. With brows furrowed, they began tracing something like the dashed line on the following page:
+
+ 
+
+ [[./the-joy-of-x-images/00189.jpeg]]
+
+ 
+
+After one circuit, many of the students stopped and looked puzzled. Then they began shouting to one another excitedly, because their lines had not closed as they'd expected. The crayon had not come back to the starting point; it was now on the “other” side of the surface. That was surprise number one: you have to go /twice/ around a Möbius strip to get back to where you started.
+
+Suddenly one boy began melting down. When he realized his crayon hadn't come back to its starting point, he thought he'd done something wrong. No matter how many times we reassured him that this was supposed to happen, that he was doing a great job, and that he should just go around the strip one more time, it didn't help. It was too late. He was on the floor, wailing, inconsolable.
+
+ With some trepidation I asked the class to try the next activity. What did they think would happen if they took their scissors and cut neatly down the midline all the way along the length of the strip?
+
+It will fall apart! It will make two pieces! they guessed. But after they tried it and something incredible happened (the strip remained in one piece but grew twice as long), there were even more squeals of surprise and delight. It was like a magic trick.
+
+After that it was hard to hold the students' attention. They were too busy trying their own experiments, making new kinds of Möbius strips with two or three half twists in them and cutting them lengthwise into halves, thirds, or quarters, producing all sorts of twisted necklaces, chains, and knots, all the while shouting variations of “Hey, look what I found!” But I still can't get over that one little boy I traumatized. And apparently my lesson wasn't the first to have driven a student to tears.
+
+Vi Hart was so frustrated by her boring math courses in high school that she began doodling in class, sketching snakes and trees and infinite chains of shrinking elephants, instead of listening to the teacher droning on. Vi, who calls herself a “full-time recreational mathemusician,” has posted some of her doodles on YouTube. They've now been watched hundreds of thousands of times, and in the case of the elephants, more than a million. She, and her videos, are breathtakingly original.
+
+Two of my favorites highlight the freaky properties of Möbius strips through an inventive use of music and stories. In the less baffling of the two, her “Möbius music box” plays a theme from a piece of music she composed, inspired by the Harry Potter books.
+
+ 
+
+ [[./the-joy-of-x-images/00190.jpeg]]
+
+ 
+
+The melody is encoded as a series of holes punched through a tape, which is then fed through a standard music box. Her innovation was to twist the ends of the tape and join them together to form a Möbius strip. By cranking the crank on the music box, Vi feeds the tape through the device and the melody plays in the normal fashion. But about fifty seconds into the video, the loop completes one circuit, and because of the half twist in the Möbius strip, the music box now begins playing what was originally the /back/ of the punched tape, upside down. Hence the same melody begins again but now with all the notes /inverted/. High notes become low notes, and low notes become high. They're still played in the same order, but upside down, thanks to the somersaults imposed by the Möbius structure.
+
+For an even more striking example of the topsy-turvy implications of Möbius strips, in “Möbius Story: Wind and Mr. Ug,” Vi tells a bittersweet story of unattainable love. A friendly little triangle named Wind, drawn with an erasable marker, unknowingly lives in a flat world made out of clear acetate and shaped like a Möbius strip. She's lonesome but ever hopeful, eager to meet the world's only other inhabitant, a mysterious gent named Mr. Ug who lives one door down. Although she's never met him---he always seems to be out when she stops by his house---she loves the messages he leaves for her and longs to meet him someday.
+
+ 
+
+ [[./the-joy-of-x-images/00191.jpeg]]
+
+ 
+
+Spoiler alert: skip the next paragraph if you don't want to learn the story's secret.
+
+Mr. Ug doesn't exist. Wind is Mr. Ug, viewed upside down and on the back of the transparent Möbius strip. Because of the clever way that Vi prints letters and makes the world turn by spinning the acetate, when Wind's name or her house or her messages go once around the Möbius strip, all those things flip over and look like they belong to Mr. Ug.
+
+ My explanation doesn't do this video justice. You've simply got to watch it to see the tremendous ingenuity at work here, combining a unique love story with vivid illustrations of the properties of Möbius strips.
+
+Other artists have likewise drawn inspiration from the perplexing features of Möbius strips. Escher used them in his drawings of ants trapped in an eternal loop. Sculptors and stone carvers, like Max Bill and Keizo Ushio, have incorporated Möbius motifs in their massive works.
+
+Perhaps the most monumental of all Möbius structures is that being planned for the National Library of Kazakhstan. Its design, by the Danish architectural firm BIG, calls for spiraling public paths that coil up and then down and in which “like a yurt the wall becomes the roof, which becomes floor, which becomes the wall again.”
+
+[[./the-joy-of-x-images/00192.jpeg]]
+
+ 
+
+The properties of Möbius strips offer design advantages to engineers as well. For example, a continuous-loop recording tape in the shape of a Möbius strip doubles the playing time. The B. F. Goodrich Company patented a Möbius strip conveyor belt, which lasts twice as long as a conventional belt since it wears evenly on “both” sides of its surface (you know what I mean). Other Möbius patents include novel designs for capacitors, abdominal surgical retractors, and self-cleaning filters for dry-cleaning machines.
+
+But perhaps the niftiest application of topology is one that doesn't involve Möbius strips at all. It's a variation on the theme of twists and links, and you might find it helpful next time you have guests over for brunch on a Sunday morning. It's the work of George Hart, Vi's dad. He's a geometer and a sculptor, formerly a computer science professor at Stony Brook University and the chief of content at MoMath, the Museum of Mathematics in New York City. George has devised a way to slice a bagel in half such that the two pieces are locked together like the links of a chain.
+
+ 
+
+[[./the-joy-of-x-images/00193.jpeg]]
+
+ 
+
+The advantage, besides leaving your guests agog, is that it creates more surface area---and hence more room for the cream cheese.
+
+* 28. Think Globally
+
+THE MOST FAMILIAR ideas of geometry were inspired by an ancient vision---a vision of the world as flat. From the Pythagorean theorem to parallel lines that never meet, these are eternal truths about an imaginary place, the two-dimensional landscape of plane geometry.
+
+Conceived in India, China, Egypt, and Babylonia more than 2,500 years ago and codified and refined by Euclid and the Greeks, this flat-earth geometry is the main one (and often the only one) being taught in high schools today. But things have changed in the past few millennia.
+
+In an era of globalization, Google Earth, and intercontinental air travel, all of us should try to learn a little about spherical geometry and its modern generalization, differential geometry. The basic ideas here are only about 200 years old. Pioneered by Carl Friedrich Gauss and Bernhard Riemann, differential geometry underpins such imposing intellectual edifices as Einstein's general theory of relativity. At its heart, however, are beautiful concepts that can be grasped by anyone who's ever ridden a bicycle, looked at a globe, or stretched a rubber band. And understanding them will help you make sense of a few curiosities you may have noticed in your travels.
+
+ For example, when I was little, my dad used to enjoy quizzing me about geography. Which is farther north, he'd ask, Rome or New York City? Most people would guess New York City, but surprisingly they're at almost the same latitude, with Rome being just a bit farther north. On the usual map of the world (the misleading Mercator projection, where Greenland appears gigantic), it looks like you could go straight from New York to Rome by heading due east.
+
+Yet airline pilots never take that route. They always fly northeast out of New York, hugging the coast of Canada. I used to think they were staying close to land for safety's sake, but that's not the reason. It's simply the most direct route when you take the Earth's curvature into account. The shortest way to get from New York to Rome is to go past Nova Scotia and Newfoundland, head out over the Atlantic, and finally pass south of Ireland and fly across France to arrive in sunny Italy.
+
+ 
+
+[[./the-joy-of-x-images/00194.jpeg]]
+
+ 
+
+ This kind of path on the globe is called an arc of a great circle. Like straight lines in ordinary space, great circles on a sphere contain the shortest paths between any two points. They're called great because they're the largest circles you can have on a sphere. Conspicuous examples include the equator and the longitudinal circles that pass through the North and South Poles.
+
+Another property that lines and great circles share is that they're the straightest paths between two points. That might sound strange---/all/ paths on a globe are curved, so what do we mean by “straightest”? Well, some paths are more curved than others. The great circles don't do any /additional/ curving above and beyond what they're forced to do by following the surface of the sphere.
+
+Here's a way to visualize this. Imagine you're riding a tiny bicycle on the surface of a globe, and you're trying to stay on a certain path. If it's part of a great circle, you can keep the front wheel pointed straight ahead at all times. That's the sense in which great circles are straight. In contrast, if you try to ride along a line of latitude near one of the poles, you'll have to keep the handlebars turned.
+
+Of course, as surfaces go, the plane and the sphere are abnormally simple. The surface of a human body, or a tin can, or a bagel would be more typical---they all have far less symmetry, as well as various kinds of holes and passageways that make them more confusing to navigate. In this more general setting, finding the shortest path between any two points becomes a lot trickier. So rather than delving into technicalities, let's stick to an intuitive approach. This is where rubber bands come in handy.
+
+Specifically, imagine a slippery elastic string that always contracts as far as it can while remaining on an object's surface. With its help, we can easily determine the shortest path between New York and Rome or, for that matter, between any two points on any surface. Tie the ends of the string to the points of departure and arrival and let the string pull itself tight while it continues clinging to the surface's contours. When the string is as taut as these constraints allow, voilà! It traces the shortest path.
+
+ On surfaces just a little more complicated than planes or spheres, something strange and new can happen: /many/ locally shortest paths can exist between the same two points. For example, consider the surface of a soup can, with one point lying directly below the other.
+
+ 
+
+[[./the-joy-of-x-images/00195.jpeg]]
+
+ 
+
+Then the shortest path between them is clearly a line segment, as shown above, and our elastic string would find that solution. So what's new here? The cylindrical shape of the can opens up new possibilities for all kinds of contortions. Suppose we require that the string encircles the cylinder once before connecting to the second point. (Constraints like this are imposed on DNA when it wraps around certain proteins in chromosomes.) Now when the string pulls itself taut, it forms a helix, like the curves on old barbershop poles.
+
+ 
+
+ [[./the-joy-of-x-images/00196.jpeg]]
+
+
+This helical path qualifies as another solution to the shortest-path problem, in the sense that it's the shortest of the candidate paths /nearby/. If you nudge the string a little, it would necessarily get longer and then contract back to the helix. You could say it's the locally shortest path---the regional champion of all those that wrap once around the cylinder. (By the way, this is why the subject is called differential geometry: it studies the effects of small local /differences/ on various kinds of shapes, such as the difference in length between the helical path and its neighbors.)
+
+But that's not all. There's another champ that winds around twice, and another that goes around three times, and so on. There are infinitely many locally shortest paths on a cylinder! Of course, none of these helices is the globally shortest path. The straight-line path is shorter than all of them.
+
+Likewise, surfaces with holes and handles permit many locally shortest paths, distinguished by their pattern of weaving around various parts of the surface. The following snapshot from a video by the mathematician Konrad Polthier of the Free University of Berlin illustrates the non-uniqueness of these locally shortest paths, or geodesics, on the surface of an imaginary planet shaped like a figure eight, a surface known in the trade as a two-holed torus:
+ 
+
+ [[./the-joy-of-x-images/00197.jpeg]]
+
+ 
+
+The three geodesics shown here visit very different parts of the planet, thereby executing different loop patterns. But what they all have in common is their superior directness compared to the paths nearby. And just like lines on a plane or great circles on a sphere, these geodesics are the straightest possible curves on the surface. They bend to conform to the surface but don't bend /within/ it. To make this clear, Polthier has produced another illuminating video.
+ 
+
+ [[./the-joy-of-x-images/00198.jpeg]]
+
+ 
+
+Here, an unmanned motorcycle rides along a geodesic highway on a two-holed torus, following the lay of the land. The remarkable thing is that its handlebars are locked straight ahead; it doesn't need to steer to stay on the road. This underscores the earlier impression that geodesics, like great circles, are the natural generalization of straight lines.
+
+With all these flights of fancy, you may be wondering if geodesics have anything to do with reality. Of course they do. Einstein showed that light beams follow geodesics as they sail through the universe. The famous bending of starlight around the sun, detected in the eclipse observations of 1919, confirmed that light travels on geodesics through curved space-time, with the warping being caused by the sun's gravity.
+
+At a more down-to-earth level, the mathematics of finding shortest paths is critical to the routing of traffic on the Internet. In this situation, however, the relevant space is a gargantuan maze of addresses and links, as opposed to the smooth surfaces considered above, and the mathematical issues have to do with the speed of algorithms---what's the most efficient way to find the shortest path through a network? Given the myriad of potential routes, the problem would be overwhelming were it not for the ingenuity of the mathematicians and computer scientists who cracked it.
+
+ Sometimes when people say the shortest distance between two points is a straight line, they mean it figuratively, as a way of ridiculing nuance and affirming common sense. In other words, keep it simple. But battling obstacles can give rise to great beauty---so much so that in art, and in math, it's often more fruitful to impose constraints on ourselves. Think of haiku, or sonnets, or telling the story of your life in six words. The same is true of all the math that's been created to help you find the shortest way from here to there when you can't take the easy way out.
+
+Two points. Many paths. Mathematical bliss.
+
+* 29. Analyze This!
+
+MATH SWAGGERS WITH an intimidating air of certainty. Like a Mafia capo, it comes across as decisive, unyielding, and strong. It'll make you an argument you can't refuse.
+
+But in private, math is occasionally insecure. It has doubts. It questions itself and isn't always sure it's right. Especially where infinity is concerned. Infinity can keep math up at night, worrying, fidgeting, feeling existential dread. For there have been times in the history of math when unleashing infinity wrought such mayhem, there were fears it might blow up the whole enterprise. And that would be bad for business.
+
+In the HBO series /The Sopranos/, mob boss Tony Soprano consults a psychiatrist, seeking treatment for anxiety attacks, trying to understand why his mother wants to have him killed, that sort of thing. Beneath a tough exterior of certainty lies a very confused and frightened person.
+
+ 
+
+ [[./the-joy-of-x-images/00199.jpeg]]
+
+ 
+
+In much the same way, calculus put itself on the couch just when it seemed to be at its most lethal. After decades of triumph, of mowing down all the problems that stood in its way, it started to become aware of something rotten at its core. The very things that had made it most successful---its brutal skill and fearlessness in manipulating infinite processes---were now threatening to destroy it. And the therapy that eventually helped it through this crisis came to be known, coincidentally, as analysis.
+
+Here's an example of the kind of problem that worried the mathematicians of the 1700s. Consider the infinite series
+
+ 
+
+[[./the-joy-of-x-images/00200.gif]]
+
+ 
+
+It's the numerical equivalent of vacillating forever, taking one step forward, one step back, one step forward, one step back, and so on, ad infinitum.
+
+ Does this series even make sense? And if so, what does it equal?
+
+Disoriented by an infinitely long expression like this, an optimist might hope that some of the old rules---the rules forged from experience with /finite/ sums---would still apply. For example, we know that 1 + 2 = 2 + 1; when we add two or more numbers in a finite sum, we can always switch their order without changing the result: /a/ + /b/ equals /b/ + /a/ (the commutative law of addition). And when there are more than two terms, we can always insert parentheses with abandon, grouping the terms however we like, without affecting the ultimate answer. For instance, (1 + 2) + 4 = 1 + (2 + 4); adding 1 and 2 first, then 4, gives the same answer as adding 2 and 4 first, then 1. This is called the associative law of addition. It works even if some numbers are being subtracted, as long as we remember that subtracting a number is the same as adding its negative. For example, consider a three-term version of the series above, and ask: What is 1 -- 1 + 1? We could view it as either (1 -- 1) + 1 or 1 + (--1 + 1), where in that second set of parentheses we've added negative 1 instead of subtracting 1. Either way, the answer comes out to be 1.
+
+But when we try to generalize these rules to /infinite/ sums, a few unpleasant surprises lie in store for us. Look at the contradiction that occurs if we trot out the associative law and trustingly apply it to 1 -- 1 + 1 -- 1 + 1 -- 1 + ∙ ∙ ∙ . On the one hand, it appears we can annihilate the positive and negative 1s by pairing them off like so:
+
+ 
+
+[[./the-joy-of-x-images/00201.jpeg]]
+
+ 
+
+ On the other hand, we could just as well insert the parentheses like this and conclude that the sum is 1:
+
+ 
+
+[[./the-joy-of-x-images/00202.jpeg]]
+
+ 
+
+Neither argument seems more convincing than the other, so perhaps the sum is /both/ 0 and 1? That proposition sounds absurd to us today, but at the time some mathematicians were comforted by its religious overtones. It reminded them of the theological assertion that God created the world from nothing. As the mathematician and priest Guido Grandi wrote in 1703, “By putting parentheses into the expression 1 -- 1 + 1 -- 1 + ∙ ∙ ∙ in different ways, I can, if I want, obtain 0 or 1. But then the idea of creation /ex nihilo/ is perfectly plausible.”
+
+Nevertheless, it appears that Grandi favored a third value for the sum, different from either 0 or 1. Can you guess what he thought it should be? Think of what you'd say if you were kidding but trying to sound scholastic.
+
+Right---Grandi believed the true sum was [[./the-joy-of-x-images/00203.gif]]. And far superior mathematicians, including Leibniz and Euler, agreed. There were several lines of reasoning that supported this compromise. The simplest was to notice that 1 -- 1 + 1 -- 1 + ∙ ∙ ∙ could be expressed in terms of itself, as follows. Let's use the letter /S/ to denote the sum. Then by definition
+
+ 
+
+[[./the-joy-of-x-images/00204.gif]]
+
+ 
+
+Now leave the first 1 on the right-hand side alone and look at all the other terms. They harbor their own copy of /S/, positioned to the right of that first 1 and subtracted from it:
+
+ 
+
+ [[./the-joy-of-x-images/00205.jpeg]]
+
+ 
+
+So /S/ = 1 -- /S/ and therefore [[./the-joy-of-x-images/00206.gif]].
+
+The debate over the series 1 -- 1 + 1 -- 1 + ∙ ∙ ∙ raged for about 150 years, until a new breed of analysts put all of calculus and its infinite processes (limits, derivatives, integrals, infinite series) on a firm foundation, once and for all. They rebuilt the subject from the ground up, fashioning a logical structure as sound as Euclid's geometry.
+
+Two of their key notions are partial sums and convergence. A partial sum is a running total. You simply add up a finite number of terms and then stop. For example, if we sum the first three terms of the series 1 -- 1 + 1 -- 1 + ∙ ∙ ∙, we get 1 -- 1 + 1 = 1. Let's call this /S/_{3}. Here the letter /S/ stands for “sum” and the subscript 3 indicates that we added only the first three terms.
+
+Similarly, the first few partial sums for this series are
+
+ 
+
+[[./the-joy-of-x-images/00207.jpeg]]
+
+ 
+
+Thus we see that the partial sums bobble back and forth between 0 and 1, with no tendency to settle down to 0 or 1, to [[./the-joy-of-x-images/00208.jpeg]], or to anything else. For this reason, mathematicians today would say that the series 1 -- 1 + 1 -- 1 + ∙ ∙ ∙ does not converge. In other words, its partial sums don't approach /any/ limiting value as more and more terms are included in the sum. Therefore the sum of the infinite series is meaningless.
+
+ So suppose we keep to the straight and narrow---no dallying with the dark side---and restrict our attention to only those series that converge. Does that get rid of the earlier paradoxes?
+
+Not yet. The nightmares continue. And it's just as well that they do, because by facing down these new demons, the analysts of the 1800s discovered deeper secrets at the heart of calculus and then exposed them to the light. The lessons learned have proved invaluable, not just within math but for math's applications to everything from music to medical imaging.
+
+Consider this series, known in the trade as the alternating harmonic series:
+
+ 
+
+[[./the-joy-of-x-images/00209.jpeg]]
+
+ 
+
+Instead of one step forward, one step back, the steps now get progressively smaller. It's one step forward, but only /half/ a step back, then a /third/ of the step forward, a /fourth/ of a step back, and so on. Notice the pattern: the fractions with odd denominators have plus signs in front of them, while the even fractions have negative signs. The partial sums in this case are
+
+ 
+
+[[./the-joy-of-x-images/00210.jpeg]]
+
+ 
+
+And if you go far enough, you'll find that they home in on a number close to 0.69. In fact, the series can be proven to converge. Its limiting value is the natural logarithm of 2, denoted ln2 and approximately equal to 0.693147.
+
+ So what's nightmarish here? On the face of it, nothing. The alternating harmonic series seems like a nice, well-behaved, convergent series, the sort your parents would approve of.
+
+And that's what makes it so dangerous. It's a chameleon, a con man, a slippery sicko that will be anything you want. If you add up its terms in a different order, you can make it sum to anything. Literally. It can be rearranged to converge to /any/ real number: 297.126, or --42π, or 0, or whatever your heart desires.
+
+It's as if the series had utter contempt for the commutative law of addition. Merely by adding its terms in a different order, you can change the answer---something that could /never/ happen for a finite sum. So even though the original series converges, it's still capable of weirdness unimaginable in ordinary arithmetic.
+
+Rather than prove this astonishing fact (a result known as the Riemann rearrangement theorem ), let's look at a particularly simple rearrangement whose sum is easy to calculate. Suppose we add /two/ of the negative terms in the alternating harmonic series for every /one/ of its positive terms, as follows:
+
+ 
+
+[[./the-joy-of-x-images/00211.jpeg]]
+
+ 
+
+Next, simplify each of the bracketed expressions by subtracting the second term from the first while leaving the third term untouched. Then the series reduces to
+
+ 
+
+[[./the-joy-of-x-images/00212.jpeg]]
+
+ 
+
+ After factoring out [[./the-joy-of-x-images/00213.gif]] from all the fractions above and collecting terms, this becomes
+
+ 
+
+[[./the-joy-of-x-images/00214.jpeg]]
+
+ 
+
+Look who's back: the beast inside the brackets is the alternating harmonic series itself. By rearranging it, we've somehow made it /half/ as big as it was originally---even though it contains all the same terms! Arranged in this order, the series now converges to [[./the-joy-of-x-images/00215.gif]]
+
+Strange, yes. Sick, yes. And surprisingly enough, it matters in real life too. As we've seen throughout this book, even the most abstruse and far-fetched concepts of math often find application to practical things. The link in the present case is that in many parts of science and technology, from signal processing and acoustics to finance and medicine, it's useful to represent various kinds of curves, sounds, signals, or images as sums of simpler curves, sounds, signals, or images. When the basic building blocks are sine waves, the technique is known as Fourier analysis, and the corresponding sums are called Fourier series. But when the series in question bears some of the same pathologies as the alternating harmonic series and its equally deranged relatives, the convergence behavior of the Fourier series can be very weird indeed.
+
+Here, for example, is a Fourier series directly inspired by the alternating harmonic series:
+
+ 
+
+[[./the-joy-of-x-images/00216.jpeg]]
+
+ 
+
+To get a sense for what this looks like, let's graph the sum of its first ten terms.
+
+ 
+
+ [[./the-joy-of-x-images/00217.jpeg]]
+
+ 
+
+This partial sum (shown as a solid line) is clearly trying to approximate a much simpler curve, a wave shaped like the teeth of a saw (shown by the dashed line). Notice, however, that something goes wrong near the edges of the teeth. The sine waves overshoot the mark there and produce a strange finger that isn't in the sawtooth wave itself. To see this more clearly, here's a zoom near one of those edges, at x = π:
+
+ 
+
+[[./the-joy-of-x-images/00218.jpeg]]
+
+ 
+
+ Suppose we try to get rid of the finger by including more terms in the sum. No luck. The finger just becomes thinner and moves closer to the edge, but its height stays about the same.
+
+ 
+
+[[./the-joy-of-x-images/00219.jpeg]]
+
+ 
+
+The blame can be laid at the doorstep of the alternating harmonic series. Its pathologies discussed earlier now contaminate the associated Fourier series. They're responsible for that annoying finger that just won't go away.
+
+ This effect, commonly called the Gibbs phenomenon, is more than a mathematical curiosity. Known since the mid-1800s, it now turns up in our digital photographs and on MRI scans. The unwanted oscillations caused by the Gibbs phenomenon can produce blurring, shimmering, and other artifacts at sharp edges in the image. In a medical context, these can be mistaken for damaged tissue, or they can obscure lesions that are actually present.
+
+Fortunately, analysts a century ago pinpointed what causes Gibbs artifacts (see the notes on for discussion). Their insights have taught us how to overcome them, or at least how to spot them when they do occur.
+
+The therapy has been very successful. The copay is due now.
+
+* 30. The Hilbert Hotel
+
+IN FEBRUARY 2010 I received an e-mail from a woman named Kim Forbes. Her six-year-old son, Ben, had asked her a math question she couldn't answer, and she was hoping I could help:
+#+BEGIN_QUOTE
+  Today is the 100th day of school. He was very excited and told me everything he knows about the number 100, including that 100 was an even number. He then told me that 101 was an odd number and 1 million was an even number, etc. He then paused and asked: “Is infinity even or odd?”
+#+END_QUOTE
+
+I explained to Kim that infinity is neither even nor odd. It's not a number in the usual sense, and it doesn't obey the rules of arithmetic. All sorts of contradictions would follow if it did. For instance, I wrote, “if infinity were odd, 2 times infinity would be even. But both are infinity! So the whole idea of odd and even does not make sense for infinity.”
+
+Kim replied:
+
+#+BEGIN_QUOTE
+   Thank you. Ben was satisfied with that answer and kind of likes the idea that infinity is big enough to be both odd and even.
+#+END_QUOTE
+
+ 
+
+Although something got garbled in translation (infinity is /neither/ odd nor even, not /both/), Ben's rendering hints at a larger truth. Infinity can be mind-boggling.
+
+Some of its strangest aspects first came to light in the late 1800s, with Georg Cantor's groundbreaking work on set theory. Cantor was particularly interested in infinite sets of numbers and points, like the set {1, 2, 3, 4, . . .} of natural numbers and the set of points on a line. He defined a rigorous way to compare different infinite sets and discovered, shockingly, that some infinities are bigger than others.
+
+At the time, Cantor's theory provoked not just resistance, but outrage. Henri Poincaré, one of the leading mathematicians of the day, called it a “disease.” But another giant of the era, David Hilbert, saw it as a lasting contribution and later proclaimed, “No one shall expel us from the Paradise that Cantor has created.”
+
+My goal here is to give you a glimpse of this paradise. But rather than working directly with sets of numbers or points, let me follow an approach introduced by Hilbert himself. He vividly conveyed the strangeness and wonder of Cantor's theory by telling a parable about a grand hotel, now known as the Hilbert Hotel.
+
+It's always booked solid, yet there's always a vacancy.
+
+For the Hilbert Hotel doesn't have merely hundreds of rooms---it has an /infinite/ number of them. Whenever a new guest arrives, the manager shifts the occupant of room 1 to room 2, room 2 to room 3, and so on. That frees up room 1 for the newcomer and accommodates everyone else as well (though inconveniencing them by the move).
+
+ Now suppose /infinitely/ many new guests arrive, sweaty and short-tempered. No problem. The unflappable manager moves the occupant of room 1 to room 2, room 2 to room 4, room 3 to room 6, and so on. This doubling trick opens up all the odd-numbered rooms---infinitely many of them---for the new guests.
+
+Later that night, an endless convoy of buses rumbles up to reception. There are infinitely many buses, and worse still, each one is loaded with an infinity of crabby people demanding that the hotel live up to its motto, “There's always room at the Hilbert Hotel.”
+
+The manager has faced this challenge before and takes it in stride.
+
+First he does the doubling trick. That reassigns the current guests to the even-numbered rooms and clears out all the odd-numbered ones---a good start, because he now has an infinite number of rooms available.
+
+But is that enough? Are there really enough odd-numbered rooms to accommodate the teeming horde of new guests? It seems unlikely, since there are something like infinity squared people clamoring for these rooms. (Why infinity squared? Because there was an infinite number of people on each of an infinite number of buses, and that amounts to infinity times infinity, whatever that means.)
+
+This is where the logic of infinity gets very weird.
+
+To understand how the manager is going to solve his latest problem, it helps to visualize all the people he has to serve.
+
+ 
+
+ [[./the-joy-of-x-images/00220.jpeg]]
+
+ 
+
+Of course, we can't show literally all of them here, since the diagram would need to be infinite in both directions. But a finite version of the picture is adequate. The point is that any /specific/ bus passenger (your aunt Inez, say, on vacation from Louisville) is sure to appear on the diagram somewhere, as long as we include enough rows and columns. In that sense, everybody on every bus is accounted for. You name the passenger, and he or she is certain to be depicted at some finite number of steps east and south of the diagram's corner.
+
+The manager's challenge is to find a way to work through this picture systematically. He needs to devise a scheme for assigning rooms so that everybody gets one eventually, after only a /finite/ number of other people have been served.
+
+Sadly, the previous manager hadn't understood this, and mayhem ensued. When a similar convoy showed up on his watch, he became so flustered trying to process all the people on bus 1 that he never got around to any other bus, leaving all those neglected passengers screaming and furious. Illustrated on the diagram below, this myopic strategy would correspond to a path that marched eastward along row 1 forever.
+
+ 
+
+ [[./the-joy-of-x-images/00221.jpeg]]
+
+ 
+
+The new manager, however, has everything under control. Instead of tending to just one bus, he zigs and zags through the diagram, fanning out from the corner, as shown below.
+
+ 
+
+[[./the-joy-of-x-images/00222.jpeg]]
+
+ 
+
+ He starts with passenger 1 on bus 1 and gives her the first empty room. The second and third empty rooms go to passenger 2 on bus 1 and passenger 1 on bus 2, both of whom are depicted on the second diagonal from the corner of the diagram. After serving them, the manager proceeds to the third diagonal and hands out a set of room keys to passenger 1 on bus 3, passenger 2 on bus 2, and passenger 3 on bus 1.
+
+I hope the manager's procedure---progressing from one diagonal to another---is clear from the picture above, and you're convinced that any particular person will be reached in a finite number of steps.
+
+So, as advertised, there's always room at the Hilbert Hotel.
+
+The argument I've just presented is a famous one in the theory of infinite sets. Cantor used it to prove that there are exactly as many positive fractions (ratios /p///q/ of positive whole numbers /p/ and /q/) as there are natural numbers (1, 2, 3, 4, . . .). That's a much stronger statement than saying both sets are infinite. It says they are infinite to precisely the same extent, in the sense that a one-to-one correspondence can be established between them.
+
+You could think of this correspondence as a buddy system in which each natural number is paired with some positive fraction, and vice versa. The existence of such a buddy system seems utterly at odds with common sense---it's the sort of sophistry that made Poincaré recoil. For it implies we could make an exhaustive list of all positive fractions, even though there's no smallest one!
+
+And yet there is such a list. We've already found it. The fraction /p///q/ corresponds to passenger /p/ on bus /q/, and the argument above shows that each of these fractions can be paired off with a certain natural number 1, 2, 3, . . . , given by the passenger's room number at the Hilbert Hotel.
+
+ The coup de grâce is Cantor's proof that some infinite sets are bigger than this. Specifically, the set of real numbers between 0 and 1 is uncountable---it can't be put in one-to-one correspondence with the natural numbers. For the hospitality industry, this means that if all these real numbers show up at the reception desk and bang on the bell, there won't be enough rooms for all of them, even at the Hilbert Hotel.
+
+The proof is by contradiction. Suppose each real number could be given its own room. Then the roster of occupants, identified by their decimal expansions and listed by room number, would look something like this:
+
+ 
+
+[[./the-joy-of-x-images/00223.jpeg]]
+
+ 
+
+Remember, this is supposed to be a complete list. Every real number between 0 and 1 is supposed to appear somewhere, at some finite place on the roster.
+
+Cantor showed that a lot of numbers are missing from any such list; that's the contradiction. For instance, to construct one that appears nowhere on the list shown above, go down the diagonal and build a new number from the underlined digits:
+
+ 
+
+[[./the-joy-of-x-images/00224.jpeg]]
+
+ 
+
+The decimal so generated is .6975 . . .
+
+But we're not done yet. The next step is to take this decimal and change all its digits, replacing each of them with any /other/ digit between 1 and 8. For example, we could change the 6 to a 3, the 9 to a 2, the 7 to a 5, and so on.
+
+ This new decimal .325 . . . is the killer. It's certainly not in room 1, since it has a different first digit from the number there. It's also not in room 2, since its second digit disagrees. In general, it differs from the /n/th number in the /n/th decimal place. So it doesn't appear anywhere on the list!
+
+The conclusion is that the Hilbert Hotel can't accommodate all the real numbers. There are simply too many of them, an infinity beyond infinity.
+
+And with that humbling thought, we come to the end of this book, which began with a scene in another imaginary hotel. A /Sesame Street/ character named Humphrey, working the lunch shift at the Furry Arms, took an order from a roomful of hungry penguins---“Fish, fish, fish, fish, fish, fish”---and soon learned about the power of numbers.
+
+It's been a long journey from fish to infinity. Thanks for joining me.
+
